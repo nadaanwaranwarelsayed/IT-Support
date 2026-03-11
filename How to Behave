@@ -1,0 +1,11 @@
+** (failure after windows upgrade) --> start > settings > system > recovery > go back            for 10 days only 
+** (System Won't Boot After Upgrade) 
+  (1) accessing WinRE : 1- power on the computer                    "hard reboot"
+                        2- As soon as you see the Windows logo or the manufacturer's logo, press and hold the power button until the device forces a shutdown
+                        3- Repeat this process 3 times.
+                        4- On the 4th attempt, Windows will detect a boot failure and automatically enter the "Automatic Repair" mode
+                        5- When the blue screen appears, navigate to --> Advanced options > Troubleshoot > Advanced options
+  (2) from Advanced options >> startup repair                                                           
+or(3) Safe Mode if startup repair doesn't resolve the issue : from Advanced options >> Startup Settings > Restart > Enable Safe Mode
+or(4) from Advanced options >> command prompt 
+or(5) from Advanced options >> system restore      to restore the old version            
