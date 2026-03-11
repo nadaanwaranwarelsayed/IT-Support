@@ -4,8 +4,62 @@
                         2- As soon as you see the Windows logo or the manufacturer's logo, press and hold the power button until the device forces a shutdown
                         3- Repeat this process 3 times.
                         4- On the 4th attempt, Windows will detect a boot failure and automatically enter the "Automatic Repair" mode
-                        5- When the blue screen appears, navigate to --> Advanced options > Troubleshoot > Advanced options
+                        5- When the blue screen appears, navigate to --> choose an option > Troubleshoot > Advanced options
   (2) from Advanced options >> startup repair                                                           
 or(3) Safe Mode if startup repair doesn't resolve the issue : from Advanced options >> Startup Settings > Restart > Enable Safe Mode
 or(4) from Advanced options >> command prompt 
 or(5) from Advanced options >> system restore      to restore the old version            
+** (move the files in case WinRE) : 1- access WinRE  2- Troubleshoot > Advanced options > command prompt 
+                                    3- notepad + enter (file explorer) or write commands 
+
+
+
+### 🛠 Recovery Procedures (WinRE)
+**1. Accessing WinRE (Hard Reboot Method):**
+   - Force shutdown 3 times during boot to trigger "Automatic Repair".
+   - Navigate to: `Choose an option > Troubleshoot > Advanced options`.
+
+**2. Available Recovery Tools:**
+   - **Startup Repair:** Automatic fix for boot configuration.
+   - **System Restore:** Revert to a previous system state/version.
+   - **Safe Mode:** Access system to uninstall drivers/apps (via Startup Settings).
+   - **Command Prompt:** Advanced manual troubleshooting & file recovery.
+
+**3. Data Rescue (Before Clean Install):**
+   - **Via Notepad:** Open CMD > Type `notepad` > File > Open > Change type to "All Files (*.*)" to browse/copy data.
+   - **Via CMD:** Use `xcopy` to migrate data to an external drive (e.g., `xcopy C:\Path D:\Backup /E /H`).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
