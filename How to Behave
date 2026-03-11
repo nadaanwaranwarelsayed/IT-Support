@@ -14,21 +14,6 @@ or(5) from Advanced options >> system restore      to restore the old version
 
 
 
-### 🛠 Recovery Procedures (WinRE)
-**1. Accessing WinRE (Hard Reboot Method):**
-   - Force shutdown 3 times during boot to trigger "Automatic Repair".
-   - Navigate to: `Choose an option > Troubleshoot > Advanced options`.
-
-**2. Available Recovery Tools:**
-   - **Startup Repair:** Automatic fix for boot configuration.
-   - **System Restore:** Revert to a previous system state/version.
-   - **Safe Mode:** Access system to uninstall drivers/apps (via Startup Settings).
-   - **Command Prompt:** Advanced manual troubleshooting & file recovery.
-
-**3. Data Rescue (Before Clean Install):**
-   - **Via Notepad:** Open CMD > Type `notepad` > File > Open > Change type to "All Files (*.*)" to browse/copy data.
-   - **Via CMD:** Use `xcopy` to migrate data to an external drive (e.g., `xcopy C:\Path D:\Backup /E /H`).
-
 
 
 
