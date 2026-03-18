@@ -12,8 +12,10 @@
 ** (move the files in case WinRE) : 1- access WinRE  2- Troubleshoot > Advanced options > command prompt 
                                     3- notepad + enter (file explorer) or write commands 
 
-
-
+** (time lagging) --> GUI : 
+                      win + I (settings) > time&language > turn on set time automatically 
+                  --> CLI :
+                      w32tm /resync     Force immediate sync without changing settings (must run as administrators)  
 
 
 
