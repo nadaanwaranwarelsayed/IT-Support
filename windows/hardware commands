@@ -1,0 +1,24 @@
+** (memory type) --> GUI : 
+                      task manager > performance > memory 
+                 --> CLI :
+                     Get-CimInstance -ClassName Win32_PhysicalMemoryArray  (my computer cababilities , Motherboard capacity (Max RAM & Total Slots))
+                     Get-CimInstance -ClassName Win32_PhysicalMemory | Select-Object DeviceLocator, Capacity, Speed (current memory)
+** (Check RAM Generation (DDR)) --> GUI:
+                                    Task Manager > Performance > Memory
+                                         check 'Speed': 
+                                           - 1600MHz or less = DDR3
+                                           - 2133MHz to 3200MHz = DDR4
+                                           - 4800MHz+ = DDR5
+                                --> CLI:
+                                   `Get-CimInstance -ClassName Win32_PhysicalMemory | Select-Object SMBIOSMemoryType`
+                                                    - Code 24 = DDR3
+                                                    - Code 26 = DDR4 
+                                                    - Code 30/34 = DDR5
+
+
+** (Check Storage Type) :
+   `Get-PhysicalDisk | Select-Object FriendlyName, MediaType, Size`
+   
+** (Check Storage health) :
+   Get-PhysicalDisk | Select-Object FriendlyName, HealthStatus, OperationalStatus
+
