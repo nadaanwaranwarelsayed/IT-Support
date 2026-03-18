@@ -14,11 +14,9 @@
                                                     - Code 24 = DDR3
                                                     - Code 26 = DDR4 
                                                     - Code 30/34 = DDR5
-
-
 ** (Check Storage Type) :
-   `Get-PhysicalDisk | Select-Object FriendlyName, MediaType, Size`
-   
+   Get-PhysicalDisk | Select-Object FriendlyName, MediaType, Size
 ** (Check Storage health) :
    Get-PhysicalDisk | Select-Object FriendlyName, HealthStatus, OperationalStatus
-
+** (check the brand , model , protocol of the hard) : 
+   Get-PhysicalDisk | Select-Object FriendlyName, BusType
