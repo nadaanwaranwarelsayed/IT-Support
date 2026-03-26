@@ -12,11 +12,18 @@
 802.11 wireless + bluetooth --> for wifi connection (LAN) , bluetooth (PAN) personal
 ** Screens
 portable LCD (liquid crystal displays) --> light source in the back ground
-2 technologies for LCD :
-TN LCD (twisted nematic) --> the  oldest , the original LCD fast respoonse + poor viewing angle
+3 technologies for LCD :
+TN LCD (twisted nematic) --> the  oldest , the original LCD , fast respoonse + poor viewing angle
 IPS LCD (in plane switching) --> more expensive , excellent colour representation
 VA LCD (vertical alignment) --> in the middle between TN , IPS  ,  good colour + slower than TN
-
+OLED (organic light emitting diode)  --> doesn't have backlight , this organic compound emits
+light when recieving electric , thinner + lighter , very easy to carry out ex:tablets , phones
+*note* The laptop screen is a housing for two types of cables: the first one is for video on the
+left side (commonly), and it connects the motherboard and the screen directly for videos, webcam 
+and microphone. The second one is for the Wi-Fi + Bluetooth (antennas - black and white wires) on 
+the right side; these wires start from the Wi-Fi card on the motherboard, pass through the hinges, 
+and are routed around the screen to reach the top for the highest signal strength.
+webcam is abuilt in camera + microphone , audio + vedio  
 
 
 
