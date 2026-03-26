@@ -8,7 +8,8 @@
  SATA --> protocol of the hard available on (HDD , SSD , SSD M.2)
  NVMe --> protocol of the hard available on (SSD M.2 only) more speed than SATA
 ** To upgrade from HDD to SSD without reinstalling the OS or losing data, use a SATA-to-USB adapter to perform a 'Disk Cloning' process
-
+** Mini PCI or Mini PCI Express (replaceable)
+802.11 wireless + bluetooth --> for wifi connection (LAN) , bluetooth (PAN) personal
 
 
 
