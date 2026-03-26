@@ -24,6 +24,11 @@
     Get-PhysicalDisk | Select-Object FriendlyName, BusType, MediaType
 ** (Combination for all of these)
     Get-PhysicalDisk | Select-Object FriendlyName, MediaType, BusType, HealthStatus | Format-Table -AutoSize
+** (Check the RAM capacity , manufacturer , speed)
+   wmic memorychip get capacity,manufacturer,speed
+   divide the capacity on 1024 power 3 to get the size of RAM , speed on range 2133 to 3200 (DDR4)
+                                                              , speed on range 4800 to 6400 (DDR5)
 
+  
 
 
