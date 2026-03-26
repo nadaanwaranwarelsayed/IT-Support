@@ -14,6 +14,7 @@
                                                     - Code 24 = DDR3
                                                     - Code 26 = DDR4 
                                                     - Code 30/34 = DDR5
+get the full report of RAM : Get-CimInstance Win32_PhysicalMemory | Select Manufacturer, @{N="Size";E={$_.Capacity / 1GB}}, Speed, @{N="DDR_Type";E={if($_.SMBIOSMemoryType -eq 26){"DDR4"}else{"DDR5"}}}
 ** (Check Storage Type) :
     Get-PhysicalDisk | Select-Object FriendlyName, MediaType, Size
 ** (Check Storage health) :
@@ -24,11 +25,6 @@
     Get-PhysicalDisk | Select-Object FriendlyName, BusType, MediaType
 ** (Combination for all of these)
     Get-PhysicalDisk | Select-Object FriendlyName, MediaType, BusType, HealthStatus | Format-Table -AutoSize
-** (Check the RAM capacity , manufacturer , speed)
-   wmic memorychip get capacity,manufacturer,speed
-   divide the capacity on 1024 power 3 to get the size of RAM , speed on range 2133 to 3200 (DDR4)
-                                                              , speed on range 4800 to 6400 (DDR5)
 
-  
 
 
