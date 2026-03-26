@@ -52,7 +52,10 @@ The Solution:
 Slowly move the screen (open and close). If the signal flickers or the device
 disappears in Device Manager, the cable is likely damaged or loose at the hinge.
 
-
+** Screen is Black? Use the Flashlight Test!
+1- Point a flashlight closely at the screen.
+2- Can see icons? The LCD is OK, but the Backlight/Inverter is dead.
+Action: Replace the Inverter first (cheaper). If it fails, replace the LCD.
 
 
 
