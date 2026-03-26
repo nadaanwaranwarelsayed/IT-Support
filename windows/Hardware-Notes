@@ -24,7 +24,9 @@ and microphone. The second one is for the Wi-Fi + Bluetooth (antennas - black an
 the right side; these wires start from the Wi-Fi card on the motherboard, pass through the hinges, 
 and are routed around the screen to reach the top for the highest signal strength.
 webcam is abuilt in camera + microphone , audio + vedio  
-
+**Backlighting Types:
+CCFL (Old): Uses fluorescent lamps. Needs high voltage (Inverter to convert from DC to AC). Thick and heavy.
+LED (Modern): Uses small LED lights. Energy efficient. Thin+light. Used in all modern laptops , doesn't need inverter .
 
 
 
