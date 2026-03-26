@@ -1,6 +1,6 @@
-RAM types : 
+RAM (memory) types : 
  soldered RAM --> built in with mother board , if you want to replace it you must change the whole mother board 
- SO-DIMM --> removable memory that can be replaced ( it is held in place by clips within its slots ) 
+ SO-DIMM (small outline dual in-line)--> removable memory that can be replaced ( it is held in place by clips within its slots ) 
 Storage types : 
  HDD (Hard Disk Drive) --> magnetic disk , spinning drive platter (slower because it depends on physical movement to read data)
  SSD (Solid State Drive) --> no moving parts , more speed , less latency , smaller than HDD 
