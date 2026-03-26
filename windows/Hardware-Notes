@@ -27,6 +27,9 @@ webcam is abuilt in camera + microphone , audio + vedio
 **Backlighting Types:
 CCFL (Old): Uses fluorescent lamps. Needs high voltage (Inverter to convert from DC to AC). Thick and heavy.
 LED (Modern): Uses small LED lights. Energy efficient. Thin+light. Used in all modern laptops , doesn't need inverter .
-
-
+** Cables 
+The console cable has a DB-9 connector on one side to connect to the laptop (via an USB converter)
+and an RJ-45 connector on the other side to plug into the Switch's console port.
+NFC (near field communication)--> send small amounts of data wirelessly over a limited area ,
+built into the phone (payment system)
 
