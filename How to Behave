@@ -23,12 +23,34 @@
 3 - Clone: Use cloning software (like Macrium Reflect or Acronis) to copy the entire HDD to the SSD.
 4 - Swap: Power off the laptop, remove the old HDD, and physically install the SSD inside.
 5 - Boot: Turn on the laptop and enjoy the high speed!
-
-
-
-
-
-
+** (failure of wi-fi + microphone + camera) : 
+(1 software check) open device manager > see if the network adapter has yellow sign it is driver issue ,
+if network adapter doesn't exist it is hardware issue 
+The Solution:
+1- Update Driver (The Easy Way)
+Action: Right-click on the thing that have yellow sign > Select Update driver.
+Choice: Click "Search automatically for drivers".
+Result: Windows will try to find and install the best driver from the internet.
+2- Disable & Enable (The Quick Restart)
+Action: Right-click the device > Select Disable device (Click "Yes").
+Action: Wait 5 seconds, right-click again > Select Enable device.
+Result: This refreshes the connection between the hardware and the system.
+3- Uninstall & Scan (The "Fresh Start" - Most Effective)
+Action: Right-click the device > Select Uninstall device.
+Note: DO NOT check the box that says "Attempt to remove the driver" (Keep it empty).
+Action: Click Uninstall. The thing that have yellow sign will disappear from the list.
+Action: Go to the top menu and click the "Scan for hardware changes" icon (Monitor with a magnifying glass).
+Result: Windows will "rediscover" the hardware and install a clean copy of the driver automatically.
+4- Hardware ID (The Pro Way - If name is unknown)
+Action: Right-click > Properties > Details tab.
+Action: Select "Hardware Ids" from the Property dropdown menu.
+Action: Copy the first string of text (e.g., PCI\VEN_8086&DEV...) and search for it on Google.
+Result: Google will tell you the exact name of the part (e.g., Intel Wi-Fi 6 AX201). You can then download the driver directly from the manufacturer's website (Dell, HP, Intel, etc.).
+(2 hardware check) The Concept: Both the video cable and Wi-Fi antennas pass through the hinges
+If a hinge is broken or tight, it can pinch (squeeze) the wires.
+The Solution:
+Slowly move the screen (open and close). If the signal flickers or the device
+disappears in Device Manager, the cable is likely damaged or loose at the hinge.
 
 
 
