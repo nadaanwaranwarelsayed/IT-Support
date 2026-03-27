@@ -38,7 +38,8 @@ Acknowledgment: Server confirmation (Finalizes the lease).
 (like booting a diskless workstation) without the complexity of TCP.
 * protocols that uses TCP : 
 1- HTTPS (hyper text transfer protocol secure)
-2- SSH (secure shell) 
+2- SSH (secure shell) for terminal connection remotely to other devices (TCP 22 port number)
+    any communication is sending via network is set as encrypted data
 * port number --> it is the entry point for the service inside the device 
    ex : 80 for web browsing , non-ephemeral ports(permanent port numbers) (0 to 1,023)
    the device should have port number to recieve the request(data) (temprorary)(1,024 to 65,535)
@@ -47,12 +48,20 @@ Acknowledgment: Server confirmation (Finalizes the lease).
 server ip , protocol(tcp,udp) , server application port number 
 client ip , protool , client port number
 * TCP and UDP Ports are Independent : This means TCP Port 80 is completely different from UDP Port 80.
-   
-
-
-
-
-
+* FTP --> file transfer protocol , it has two port numbers 
+    TCP 20 to send the files , TCP 21 to control the data transfer 
+     you can (list , add , delete) files
+* Telnet is another way for control remotely devices (like SSH)  (TCP 23 port number)
+* SMTP (simple mail transfer protocol) --> to send mails (TCP 25 port number)
+* POP3 (post office protocol version 3) (TCP 110 port number) --> Downloads emails to a single device and usually deletes them from the server. (Old way).
+  IMAP (internet message access protocol) (TCP 143 port number)--> Syncs emails across multiple devices. Everything stays on the server. (Modern way).
+* DNS (domain name server) --> convert web names to IP address (UDP 53 port number)
+* DHCP --> automatically assign IP addresses to devices (udp 67 , udp 68)
+    pool of IP addresses , each device have this IP until it exit the network ,then this IP 
+    will go back ti the pool , you can manage the IP addresses from DHCP  server 
+* SMB (server message block) = CIFS(common internet file system) --> file sharing , printer sharing in Windows networks
+  Modern Port: TCP 445 (Direct SMB without NetBIOS) , Old Ports: UDP 137 & TCP 139 (Using NetBIOS).
+* RDP (remote desktop protocol) (TCP 3389 port number) --> like share screen but more powerful
 
 
 
