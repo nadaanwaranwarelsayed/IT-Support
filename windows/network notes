@@ -1,10 +1,10 @@
-*IP --> the truck that have the boxes (UDP , TCP) that hold my data to transfer it across network (Ethernet , Fiber , DSL)
-*Ethernet , Fiber , DSL --> physical layer || Ethernet: Directly connected by Copper cables between your Device and the Switch/Router. 
-*DSL (Digital Subscriber Line): Directly connected between the Central Office (CO) and your Home Router using telephone copper lines.
-*Fiber / Coaxial: High-speed physical paths that connect the ISP (Internet Service Provider) to your building or neighborhood. (better version of DSL)
-*IP --> network layer
-*TCP , UDP --> transport layer
-*Data Encapsulation :
+* IP --> the truck that have the boxes (UDP , TCP) that hold my data to transfer it across road"networkEt"(Ethernet , Fiber , DSL)
+* Ethernet , Fiber , DSL --> physical layer || Ethernet: Directly connected by Copper cables between your Device and the Switch/Router. 
+* DSL (Digital Subscriber Line): Directly connected between the Central Office (CO) and your Home Router using telephone copper lines.
+* Fiber / Coaxial: High-speed physical paths that connect the ISP (Internet Service Provider) to your building or neighborhood. (better version of DSL)
+* IP --> network layer
+* TCP , UDP --> transport layer
+* Data Encapsulation :
 Ethernet Frame (Layer 2):
 Header: Contains the MAC Address (Source & Destination).
 Payload: Carries the entire IP Packet.
@@ -20,13 +20,13 @@ Note: Port Number identifies the specific application (e.g., Port 80 for Browser
 Application Data (Layer 7):
 Content: The actual HTTP Data.
 Note: This is the real content (image, text, or file) being sent.
-*TCP (transmission control protocol) --> make sure that the data sent successfully if something failed stop until
+* TCP (transmission control protocol) --> make sure that the data sent successfully if something failed stop until
 resent successfully (recovery from error) (TCP data > , < TCP ack "three-way handshake") , flow control if the sending speed more than recieving speed it can manage how much 
 data should be sent (windowing) to prevent (buffer overflow) , TCP needs IP adress first to send the data
-*UDP (user datagram protocol) --> connectionless (Doesn't establish a "handshake" before sending data. It just starts sending),
+* UDP (user datagram protocol) --> connectionless (Doesn't establish a "handshake" before sending data. It just starts sending),
 unreliable (no error recovery) , if the data failed to be sent it will be skipped no flow control ,
 cannot be cancelled (doesn't stop to retransmission) 
-*protocols that uses UDP :
+* protocols that uses UDP :
 1- DHCP (dynamic host configuration protocol) --> Used to automatically assign IP addresses.
 Why UDP? Because a device doesn't have an IP address yet to start a TCP connection, so it must Broadcast via UDP.
 Reliability: The DHCP Application Layer ensures the IP is assigned successfully using DORA steps:
@@ -36,13 +36,18 @@ Request: Device accepts the IP address.
 Acknowledgment: Server confirmation (Finalizes the lease).
 2- TFTP (trivial file system protocol) --> a simple version of FTP used for quick file transfers 
 (like booting a diskless workstation) without the complexity of TCP.
-
-
-
-
-
-
-
+* protocols that uses TCP : 
+1- HTTPS (hyper text transfer protocol secure)
+2- SSH (secure shell) 
+* port number --> it is the entry point for the service inside the device 
+   ex : 80 for web browsing , non-ephemeral ports(permanent port numbers) (0 to 1,023)
+   the device should have port number to recieve the request(data) (temprorary)(1,024 to 65,535)
+       (not fixed number , determined in real time by the client)
+* to get connection between the device , server(router) :
+server ip , protocol(tcp,udp) , server application port number 
+client ip , protool , client port number
+* TCP and UDP Ports are Independent : This means TCP Port 80 is completely different from UDP Port 80.
+   
 
 
 
