@@ -9,10 +9,3 @@ The Task: "Perform a complete deletion of a temporary cache directory. Since som
 messages must be silenced and hidden from the terminal."
 The Command:
 rm -Path '.\Temporary_Cache' -Recurse -Force 2> $null
-
----
-
-### **💡 نصائح ليكي يا ندى عشان الـ GitHub بتاعك "ينور":**
-
-1.  **العناوين (`##` و `###`):** دي بتعمل حجم خط كبير وبتخلي الـ GitHub يعمل لك "جدول محتويات" تلقائي على الجنب.
-2.  **الـ Code Blocks ( الثلاث نقاط
