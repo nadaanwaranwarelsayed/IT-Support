@@ -1,0 +1,18 @@
+The Task: "Extract all PDF documents from a source directory (including subfolders) and copy them to a dedicated backup folder."
+The Command:
+ls -Path 'D:\Source_Data' -Filter *.pdf -Recurse | cp -Destination 'C:\Backup_Folder'
+The Task: "Search through a massive system log file for a specific date (2026-04-01)and export only the matching lines to a new
+incident report, ensuring minimal memory usage."
+The Command:
+more system_logs.txt | sls "2026-04-01" > incident_report.txt
+The Task: "Perform a complete deletion of a temporary cache directory. Since some files might be locked or restricted, all error
+messages must be silenced and hidden from the terminal."
+The Command:
+rm -Path '.\Temporary_Cache' -Recurse -Force 2> $null
+
+---
+
+### **💡 نصائح ليكي يا ندى عشان الـ GitHub بتاعك "ينور":**
+
+1.  **العناوين (`##` و `###`):** دي بتعمل حجم خط كبير وبتخلي الـ GitHub يعمل لك "جدول محتويات" تلقائي على الجنب.
+2.  **الـ Code Blocks ( الثلاث نقاط
