@@ -1,4 +1,4 @@
-**The Task:** 
+`The Task:`
 Extract all PDF documents from a source directory (including subfolders) and copy them to a dedicated backup folder
 `The Command:`
 ls -Path 'D:\Source_Data' -Filter *.pdf -Recurse | cp -Destination 'C:\Backup_Folder'
