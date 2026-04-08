@@ -38,7 +38,35 @@ process in windows(3 types of streams     |  stdin, stdout,stderr) pipe(|) examp
 `cat file.txt | sls st > file2.txt`       |  move the output to the file2.txt
 `rm secure_folder 2> file.txt`            |  error will be saved in file.txt
 `rm secure_folder 2> $null`               |  silence error , will not appear on terminal screen $null is a black hole
-`ni -Path 'path' -ItemType 'file' -Value '|hello ndod' -force`       |  to make file or folder 'new item'
+`ni -Path 'path' -ItemType 'file' -Value 'hello ndod' -force`       |  to make file or folder 'new item'
+`get-localuser`                           |  show users 
+`get-localgroup`                          |  show groups 
+`get-localgroupmember 'group name'`       |  show members of specific group 
+`$PSVersionTable.PSVersion`               |  version of the powershell
+`net`                                     |  change password , add users , remove users , modify users info
+`net user nada *`                         |  change password in hide (run as admin)
+`net user nada /logonpasswordchg:yes`     |  the user must change his password after login to the system
+`net user sarah nnnnn /add                | create new user with password nnnn 
+= net user sarah * /add`                  | create new user with hidden password
+`net user sarah * /comment:"title" /add`  | create new user with hidden password and description
+`New-LocalUser -Name "sarah" -Description "HR Manager" -Password (Read-Host "Enter Password" -AsSecureString)` |   AsSecureString like * in net 
+`net user sarah /del                      |  delete user sarah 
+= remove-localuser sarah`                 |  delete user sarah 
+`Set-LocalUser`                           |  modify data for user already exists
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
