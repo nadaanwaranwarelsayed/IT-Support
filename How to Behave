@@ -62,12 +62,12 @@ Digitizer Definition: A clear layer over the screen that converts touch or pen i
 Stylus: A pen-like tool used for precise drawing or writing.
 Common Issue: If the screen shows a picture but the Touch is dead, the problem is the Digitizer.
 
-** when I studing get-process command I discovered there is some programs are running but I not open it at the moment so I run stop-process command to stop it : 
+** When I studing get-process command I discovered there is some programs are running but I not open it at the moment so I run stop-process command to stop it : 
 stop-process -name mongod, sqlservr, mysqld -force                      or use wildcards to avoid naming conflicts :  
 stop-process -name mongo*, sql*, mysql* -force
 
-
-
+** If you want to delete/modify a file but the owner revoked your permissions 
+icacls "Path" /setowner "Nada"           to get the right to delete/modify this file/folder 
 
 
 
