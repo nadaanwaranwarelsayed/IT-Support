@@ -8,7 +8,7 @@
 `cd 'c:\users\mega store\.m2'`            |  absolute path
 `cd ..`                                   |  relative path  one step for backward
 `cd ..\.m2`                               |  one step to backward then go to 
-`cd ~\.android`                           |  telda refer to home directory 
+`cd ~\.android`                           |  tilde refer to home directory 
 `#cd + tab`                               |  reuse last usage of cd 
 `mkdir 'folder name' `                    |  make folde in the current directory 
 `history` or use `arrow`                  |  List Used Commands   
@@ -53,13 +53,21 @@ process in windows(3 types of streams     |  stdin, stdout,stderr) pipe(|) examp
 `net user sarah /del                      |  delete user sarah 
 = remove-localuser sarah`                 |  delete user sarah 
 `Set-LocalUser`                           |  modify data for user already exists
-
-
-
-
-
-
-
+`icacls`                                  |  see who has permissions on this file and what are these permissions (DACLs) , to modify permissions
+`icacls 'path'`                           |  see DACLs of specific file 
+NTFS                                      |  file system to control access (F,M,I,OI......)
+'icacls "path" /grant "everyone:(oi)(ci)(r)"` | grants everyone read-only access with full inheritance for all files and subdirectories (object inherit , container inherit)
+'icacls "path" /grant "authenticated users:(oi)(ci)(r)"'  | grant these permissions to only users with user name , password
+'icacls "c:\vacation pictures" /remove everyone'          | revoke all access rights from everyone
+'(io)(f)'                                                 | full control is inherited by new items only
+'wd'                                                      | allows editing, deleting, and adding content to files, as well as creating new subfolders.
+'ad'                                                      | allows appending data to the end of files without modifying or deleting existing content 
+'rx'                                                      | allows navigating folders, viewing file lists, and reading file contents 
+ get-process 
+ stop-process 
+ test-path
+ get-eventlog
+icacls /setowner
 
 
 
