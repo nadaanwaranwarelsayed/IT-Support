@@ -64,23 +64,23 @@ process in windows(3 types of streams     |  stdin, stdout,stderr) pipe(|) examp
 `icacls 'path'`                           |  see DACLs of specific file 
 NTFS                                      |  file system to control access (F,M,I,OI......)
 'icacls "path" /grant "everyone:(oi)(ci)(r)"` | grants everyone read-only access with full inheritance for all files and subdirectories (object inherit , container inherit)
-'icacls "path" /grant "authenticated users:(oi)(ci)(r)"'  | grant these permissions to only users with user name , password
-'icacls "c:\vacation pictures" /remove everyone'          | revoke all access rights from everyone
-'(io)(f)'                                                 | full control is inherited by new items only
-'wd'                                                      | allows editing, deleting, and adding content to files, as well as creating new subfolders.
-'ad'                                                      | allows appending data to the end of files without modifying or deleting existing content 
-'rx'                                                      | allows navigating folders, viewing file lists, and reading file contents 
-icacls "Path" /setowner "Nada"                            | replace the owner of this file/folder so I can take control if "Access Denied"
-get-process                                               | list all active programs and resource usage
-stop-process -name mongod, sqlservr, mysql -force         | stop programs that I don't want it at the moment not permenant
-set-service -name "SQLWriter" -startuptype manual         | stop the automatic running when I open my laptop permanent
-start-service -name "SQLWriter"                           | turn the program on after I locked it permanent ↑
-Get-Service -Name "mysql*", "mssql*", "mongo*" | Select-Object Name, StartType, Status | show services status to ensure no database is consuming resources in the background
-get-eventlog                                              | get history/logs of events that occurred in Windows 
-get-eventlog -logname System -newest 10                   | list latest 10 events occured to windows 
-get-eventlog -logname System -entrytype Error -newest 5   | list latest 5 errors occured to windows 
-get-eventlog -logname System -message "*disk*"            | list events that contain "disk" word 
-test-path (path)                                          | verify if the file/folder exist or not (boolean output)
+'icacls "path" /grant "authenticated users:(oi)(ci)(r)"'    | grant these permissions to only users with user name , password
+'icacls "c:\vacation pictures" /remove everyone'            | revoke all access rights from everyone
+'(io)(f)'                                                   | full control is inherited by new items only
+'wd'                                                        |   allows editing, deleting, and adding content to files, as well as creating new subfolders.
+'ad'                                                        | allows appending data to the end of files without modifying or deleting existing content 
+'rx'                                                        | allows navigating folders, viewing file lists, and reading file contents 
+'icacls "Path" /setowner "Nada"'                            | replace the owner of this file/folder so I can take control if "Access Denied"
+'get-process'                                               | list all active programs and resource usage
+'stop-process -name mongod, sqlservr, mysql -force'         | stop programs that I don't want it at the moment not permenant
+'set-service -name "SQLWriter" -startuptype manual'         | stop the automatic running when I open my laptop permanent
+'start-service -name "SQLWriter"'                           | turn the program on after I locked it permanent ↑
+'Get-Service -Name "mysql*", "mssql*" | Select-Object Name, StartType, Status' | show services status to ensure no database is consuming resources in the background
+'get-eventlog'                                              | get history/logs of events that occurred in Windows 
+'get-eventlog -logname System -newest 10'                   | list latest 10 events occured to windows 
+'get-eventlog -logname System -entrytype Error -newest 5'   | list latest 5 errors occured to windows 
+'get-eventlog -logname System -message "*disk*"'            | list events that contain "disk" word 
+'test-path (path)'                                          | verify if the file/folder exist or not (boolean output)
 
 
 
