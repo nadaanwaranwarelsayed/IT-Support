@@ -18,13 +18,14 @@ Comprehensive guide for:
 
 |                 Command                 |           Function              |
 ----------------------------------------------------------------------------- flag 
+command--Help = man command               | know more about commands but man more detailed
 ls ~/Documents                            | list all files/subdirectories in documents folder 
 ls --help = man ls                        | get more about ls command
 ls -lh /home/nada/Downloads               | displays a detailed, vertical list of files including permissions, owners, and sizes in human-readable format
 ls -a /Documents                          | list all files , subdirectories + hidden(starting with . )
 cd ../Desktop                             | one step to back (Parent) then enter to another directory(Desktop)
-mkdir 'folder name'                       | make new directory in current directory 
-touch 'file name.txt'                     | make new file in current directory
+mkdir 'folder name'                       | create new directory in current directory 
+touch 'file name.txt'                     | create new file in current directory
 nano 'file name'                          | to create file then you will write what you want then ctrl+o for save , ctrl+x for exit  or show + edit file if already exist
 history                                   | for show , use the last command one more time
 ctrl+R                                    | for search , one more ctrl+R to see one more matched in history not in file for file we use "less command"
@@ -40,10 +41,11 @@ cat 'file name'                           | show the content without editing
 head 'file name'                          | show the first 10 rows by default      head -n 15 'file name'
 tail 'file name'                          | show the last  10 rows by default      tail -n 15 'file name'
 less 'file name'                          | less in linux = more in windows    up,down,g(to first row),G(to last row),/word(search),q(quit)  ****very important command
-grep word 'file name' or  grep word *.txt | search about word in file or many files     
+grep -i word 'file name'                  | search about word in file whatever the letters capital/small (ignore case)
+grep -i word *.txt | search about word in many files (wildcard)    
 ls /home 2> /dev/null                     | /dev/null = $null in windows
 ls -la /etc | grep bluetooth              | use pipe to combine two commands in one line || list only rows in etc file that contain 'bluetooth' word
-** Get-Help , history , more , (less , grep) in linux --> so important commands
+** --Help , history , more , (less , grep) in linux --> so important commands
 
 
 
