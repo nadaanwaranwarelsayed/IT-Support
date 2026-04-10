@@ -1,12 +1,61 @@
-## The Task:
+__The Task:__
 Extract all PDF documents from a source directory (including subfolders) and copy them to a dedicated backup folder
-** The Command:` **
+__The Command:__
 ls -Path 'D:\Source_Data' -Filter *.pdf -Recurse | cp -Destination 'C:\Backup_Folder'
-The Task: "Search through a massive system log file for a specific date (2026-04-01)and export only the matching lines to a new
+__The Task:__
+Search through a massive system log file for a specific date (2026-04-01)and export only the matching lines to a new
 incident report, ensuring minimal memory usage."
-The Command:
+__The Command:__
 more system_logs.txt | sls "2026-04-01" > incident_report.txt
-The Task: "Perform a complete deletion of a temporary cache directory. Since some files might be locked or restricted, all error
+__The Task:__
+Perform a complete deletion of a temporary cache directory. Since some files might be locked or restricted, all error
 messages must be silenced and hidden from the terminal."
-The Command:
+__The Command:__
 rm -Path '.\Temporary_Cache' -Recurse -Force 2> $null
+__The Task:__
+Create a new user account "Ahmed" for the Accounting department. The account must include a descriptive comment, mask 
+the password during creation for privacy, and force the user to change their password upon the first login
+__The Command:__
+net user ahmed * /comment:"Accounting" /logonpasswordchg:yes /add
+__The Task:__
+Secure a sensitive directory "Salaries" on the C: drive. Disable inheritance to clear existing permissions, revoke all 
+access for "Everyone", and grant "Full Control" exclusively to "Authenticated Users" while ensuring all future sub-items inherit these settings.
+__The Command:__
+mkdir C:\Salaries; icacls C:\Salaries /inheritance:d; icacls C:\Salaries /remove everyone; icacls C:\Salaries /grant "authenticated users:(oi)(ci)(f)"
+__The Task:__
+Offboard a resigned employee named "Mona" by immediately and permanently deleting her user account from the system to prevent any unauthorized remote or local access.
+__The Command:__
+net user mona /del
+__The Task:__
+Conduct a security audit to verify the members of the "Administrators" group, ensuring that only authorized users (and not unauthorized accounts like "Guest1") have elevated privileges.
+__The Command:__
+get-localgroupmember Administrators
+__The Task:__
+Configure a "Public_Docs" folder for collaboration. Grant "Everyone" the ability to read existing files and append new data/files, but restrict them from modifying or deleting any content created by others using specific NTFS flags.
+__The Command:__
+icacls C:\Public_Docs /grant "everyone:(oi)(ci)(rx,ad)"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
