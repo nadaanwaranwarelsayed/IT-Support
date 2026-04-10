@@ -6,7 +6,7 @@
 * 🛠️ Logging & Troubleshooting
 
 |                 Command                 |           Function              |
------------------------------------------------------------------------------
+-----------------------------------------------------------------------------parameter
 `ls`   (-force  , -recurse , -filter)     |  List current files and folders / hidden / subfiles+folders / get specific files 
 `ls 'path' -recurse -filter *.exe `       |  list specific files using filter
 `get-help ls`  (-full , -examples..)      |  know more about command like ls
