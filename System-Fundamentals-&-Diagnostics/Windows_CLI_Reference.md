@@ -1,3 +1,10 @@
+# Windows System Administration & Core CLI Ops
+## Comprehensive guide for:
+* 📂 File & Directory Management
+* 🔐 User & Access Control 
+* ⚙️ Process & Service Management
+* 🛠️ Logging & Troubleshooting
+
 |                 Command                 |           Function              |
 -----------------------------------------------------------------------------
 `ls`   (-force  , -recurse , -filter)     |  List current files and folders / hidden / subfiles+folders / get specific files 
@@ -10,7 +17,7 @@
 `cd ..\.m2`                               |  one step to backward then go to 
 `cd ~\.android`                           |  tilde refer to home directory 
 `#cd + tab`                               |  reuse last usage of cd 
-`mkdir 'folder name' `                    |  make folde in the current directory 
+`mkdir 'folder name' `                    |  make folder in the current directory 
 `history` or use `arrow`                  |  List Used Commands   
 `tab`                                     |  autocomplete
 `cp *.pdf 'paste to specific path'`       |  use wildcard to copy all files with the same extension to specific folder , copy must be from working directory   
@@ -19,11 +26,11 @@
 `mv 'file name' 'new file name'`          |  rename file
 `mv 'file' 'path'` -force                 |  move the file to another directory , force to move the file even if it is read only
 `mv *_documents.txt 'path'`               |  use wildcard to speed up the process
-`rm 'file name'` -force                   |  permenant deletion , force for delete even if file has protection
+`rm 'file name'` -force                   |  permanent deletion , force for delete even if file has protection
 `rm 'folder name'` -recurse               |  delete directory + its files must use -recurse
 `cat 'file name'`                         |  show the content of the file , efficient for small files 
-`cat 'file name' -Head 10`                |  to show first lines , must write number not like python :) 
-`cat 'file name' -tail 10`                |  to show last lines  , must write number 
+`cat 'file name' -Head 10`                |  to show first 10 lines , must write number not like python :) 
+`cat 'file name' -tail 10`                |  to show last 10 lines  , must write number 
 `more 'file name'`                        |  show the content of the file in parts , efficient for large files (enter,space,q) , memory efficient
 `winget search 'name of the program'`     |  to search for the program before installation to make sure of the program name
 `winget install / uninstall 'name'`       |  to speed up and skip all silly process of manual installation process 
@@ -63,19 +70,18 @@ NTFS                                      |  file system to control access (F,M,
 'wd'                                                      | allows editing, deleting, and adding content to files, as well as creating new subfolders.
 'ad'                                                      | allows appending data to the end of files without modifying or deleting existing content 
 'rx'                                                      | allows navigating folders, viewing file lists, and reading file contents 
-icacls "Path" /setowner "Nada"                            | replace the owner of this file/folder
- get-process                                              | list all active programs and resource usage
- stop-process -name mongod, sqlservr, mysql -force        | stop programs that I don't want it at the moment not permenant
- test-path (path)                                         | verify if the file/folder exist or not (boolean output)
- get-eventlog                                             | get history/logs of events that occurred in Windows 
- get-eventlog -logname System -newest 10                  | list latest 10 events occured to windows 
- get-eventlog -logname System -entrytype Error -newest 5  | list latest 5 errors occured to windows 
- get-eventlog -logname System -message "*disk*"           | list events that contain "disk" word 
-icacls "C:\Path\To\File" /setowner "Nada"
+icacls "Path" /setowner "Nada"                            | replace the owner of this file/folder so I can take control if "Access Denied"
+get-process                                               | list all active programs and resource usage
+stop-process -name mongod, sqlservr, mysql -force         | stop programs that I don't want it at the moment not permenant
+set-service -name "SQLWriter" -startuptype manual         | stop the automatic running when I open my laptop permanent
+start-service -name "SQLWriter"                           | turn the program on after I locked it permanent ↑
+Get-Service -Name "mysql*", "mssql*", "mongo*" | Select-Object Name, StartType, Status | show services status to ensure no database is consuming resources in the background
+get-eventlog                                              | get history/logs of events that occurred in Windows 
+get-eventlog -logname System -newest 10                   | list latest 10 events occured to windows 
+get-eventlog -logname System -entrytype Error -newest 5   | list latest 5 errors occured to windows 
+get-eventlog -logname System -message "*disk*"            | list events that contain "disk" word 
+test-path (path)                                          | verify if the file/folder exist or not (boolean output)
 
-
-
-الحاجات اللي بتقفل علي طول م مؤقتا 
 
 
 
