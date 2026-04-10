@@ -63,12 +63,19 @@ NTFS                                      |  file system to control access (F,M,
 'wd'                                                      | allows editing, deleting, and adding content to files, as well as creating new subfolders.
 'ad'                                                      | allows appending data to the end of files without modifying or deleting existing content 
 'rx'                                                      | allows navigating folders, viewing file lists, and reading file contents 
- get-process 
- stop-process 
- test-path
- get-eventlog
-icacls /setowner
+icacls "Path" /setowner "Nada"                            | replace the owner of this file/folder
+ get-process                                              | list all active programs and resource usage
+ stop-process -name mongod, sqlservr, mysql -force        | stop programs that I don't want it at the moment not permenant
+ test-path (path)                                         | verify if the file/folder exist or not (boolean output)
+ get-eventlog                                             | get history/logs of events that occurred in Windows 
+ get-eventlog -logname System -newest 10                  | list latest 10 events occured to windows 
+ get-eventlog -logname System -entrytype Error -newest 5  | list latest 5 errors occured to windows 
+ get-eventlog -logname System -message "*disk*"           | list events that contain "disk" word 
+icacls "C:\Path\To\File" /setowner "Nada"
 
+
+
+الحاجات اللي بتقفل علي طول م مؤقتا 
 
 
 
