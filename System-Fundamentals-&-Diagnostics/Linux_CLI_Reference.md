@@ -46,6 +46,26 @@ grep -i word *.txt | search about word in many files (wildcard)
 ls /home 2> /dev/null                     | /dev/null = $null in windows
 ls -la /etc | grep bluetooth              | use pipe to combine two commands in one line || list only rows in etc file that contain 'bluetooth' word
 ** --Help , history , more , (less , grep) in linux --> so important commands
+sudo(super user do)                       | like run as admin in powershell (UAC)
+sudo -l                                   | to know what permissions I have
+sudo cat /etc/sudoers                     | show who has access to use sudo must type sudo even if I have permissions of root 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
