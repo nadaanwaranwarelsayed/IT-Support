@@ -83,9 +83,9 @@ r = 4 , w = 2 , x = 1 , - = 0              permission of this file 764
 `chmod 754 'file'`                          | (numeric format)
 `sudo chown sarah 'file'`                   | change the owner of the file
 `sudo chgrp 'newgroup' 'file'`              | change the group that the file belongs to
-
-
-
+`sudo chmod u+s 'file'`                     | lets a normal user run the passwd program as if they were the Root (Admin)   s=4
+`sudo chmod g+s 'file'`                     | s (set user id SUID)  s=2
+`sudo chmod +t 'folder'`                    | everyone can add or modify files but root only can delete t=1
 
 
 
