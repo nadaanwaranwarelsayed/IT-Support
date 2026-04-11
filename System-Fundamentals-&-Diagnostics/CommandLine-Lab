@@ -1,3 +1,4 @@
+******windows******
 __The Task:__
 Extract all PDF documents from a source directory (including subfolders) and copy them to a dedicated backup folder
 __The Command:__
@@ -34,11 +35,27 @@ __The Task:__
 Configure a "Public_Docs" folder for collaboration. Grant "Everyone" the ability to read existing files and append new data/files, but restrict them from modifying or deleting any content created by others using specific NTFS flags.
 __The Command:__
 icacls C:\Public_Docs /grant "everyone:(oi)(ci)(rx,ad)"
-
-
-
-
-
+******linux******
+__The Task:__
+Extract all PDF documents from a source directory (including subfolders) and copy them to a dedicated backup folder.
+__The Command:__
+cp -r /home/nada/Source_Data/*.pdf /home/nada/Backup_Folder/
+__The Task:__
+Conduct a security audit to verify the members of the "sudo" (Administrators) group to ensure only authorized users have elevated privileges.
+__The Command:__
+cat /etc/group | grep sudo
+__The Task:__
+Create a new user account "Ahmed", set an initial password, and force him to change it upon the first login for security.
+__The Command:__ 
+sudo useradd -m ahmed; sudo passwd ahmed; sudo passwd -e ahmed
+__The Task:__
+Perform a complete deletion of a temporary cache directory. Since some files might be locked, all error messages must be silenced and hidden.
+__The Command:__
+rm -r ./Temporary_Cache 2> /dev/null
+__The Task:__ 
+Configure a "Public_Docs" folder for collaboration where everyone can add files, but restrict them from deleting any content created by others.
+__The Command:__
+sudo chmod +t /Public_Docs
 
 
 
