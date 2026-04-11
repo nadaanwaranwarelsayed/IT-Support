@@ -1,20 +1,13 @@
 🐧 Linux System Administration & Core CLI Ops
 Comprehensive guide for:
 📂 File & Directory Management
-
-(ls, cd, mkdir, rm, cp, mv, touch, chmod, chown)
+(ls, cd, mkdir, touch, cp, mv, rm, cat, nano, grep, pipe |)
 
 🔐 User & Access Control
+(useradd, usermod, userdel, passwd, sudo, /etc/passwd, /etc/shadow)
 
-(useradd, usermod, passwd, sudo, groups, /etc/shadow)
-
-⚙️ Process & Service Management
-
-(ps, top, htop, systemctl, kill, bg/fg)
-
-🛠️ Logging & Troubleshooting
-
-(tail -f, journalctl, dmesg, uptime, df/du)
+🛡️ Permissions & Ownership
+(chmod, chown, chgrp, SUID, SGID, Sticky Bit)
 
 |                 Command                 |           Function              |
 ----------------------------------------------------------------------------- flag 
@@ -84,8 +77,8 @@ r = 4 , w = 2 , x = 1 , - = 0              permission of this file 764
 `sudo chown sarah 'file'`                   | change the owner of the file
 `sudo chgrp 'newgroup' 'file'`              | change the group that the file belongs to
 `sudo chmod u+s 'file'`                     | lets a normal user run the passwd program as if they were the Root (Admin)   s=4
-`sudo chmod g+s 'file'`                     | s (set user id SUID)  s=2
-`sudo chmod +t 'folder'`                    | everyone can add or modify files but root only can delete t=1
+`sudo chmod g+s 'file'`                     | s (set group id SGID)  s=2
+`sudo chmod +t 'folder'`                    | everyone can add or modify files but root/owner only can delete t=1
 
 
 
