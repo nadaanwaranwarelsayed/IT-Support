@@ -64,3 +64,39 @@ I configured the DHCP pool to start from `192.168.1.101`, reserving the lower ra
 * Performed a **Ping test** between the dynamic hosts to ensure that internal routing within the VLAN is fully operational.
 
 > **Final Result:** The implementation was successful, providing a reliable and automated addressing solution for the local network.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
+
+## Lab 04: Full Network Services Integration (DHCP, DNS, & HTTP)
+In this lab, I integrated three essential network services into a single server to simulate a real-world local network environment. The objective was to demonstrate how these services collaborate to provide a seamless user experience.
+
+### Task Objectives:
+* **DHCP:** Automate IP assignment and distribute DNS server information to clients.
+* **DNS:** Map the domain `nada.com` to the server's static IP address.
+* **HTTP:** Host a custom web page accessible via the domain name.
+
+### Implementation & Verification:
+The following image captures the complete integrated setup:
+1. **Infrastructure:** A central switch connecting the server and three PCs.
+2. **DNS Configuration:** An `A Record` was created for `nada.com` pointing to `192.168.1.100`.
+3. **End-to-End Success:** The Web Browser on **PC0** successfully loads the custom page using the domain name instead of the IP address.
+
+<img width="1500" height="502" alt="04_Integrated_Network_Services" src="https://github.com/user-attachments/assets/c554c37a-a9e5-44f5-bb72-15dfead47b0b" />
+
+> **Final Outcome:** This lab proves the transition from basic connectivity to a functional service-based network. The integration allows users to access resources intuitively without needing to know the underlying technical IP addresses.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
