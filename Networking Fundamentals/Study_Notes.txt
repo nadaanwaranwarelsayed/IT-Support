@@ -13,10 +13,11 @@ devices request IPs from server so the server must be have Static IP
 **Commands**
 ping --> checking connection between two devices 
 
-*Technical Notes*
+**Technical Notes**
 IPs from 1 --> 10 for router , switches .....(managed)
         50 --> 100 for servers , printers .....(Static)
        101 --> 254 for DHCP pool .....(Devices)
+
 
 
 
