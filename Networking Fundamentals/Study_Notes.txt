@@ -1,1 +1,27 @@
+**Connection**
+Copper cross-over  --> connecting between two devices of the same type (pc,router)
+Copper straight-through --> connecting between two different devices (PC to Switch) or (Router to Switch)
+Console cable --> connecting between pc , new router/new switch to program it (RS232 port)
+Single fiber --> connection between countries , thin , expensive
+Multi fiber --> connection between local devices , thick , less expensive than single
+FastEthernet0 --> the network port in devices 
+IP address  --> logical address used to identify a device on a network.
+Subnet mask --> defines which part of the IP address belongs to the Network and which part belongs to the host (the device). It determines the size/range of the network
+
+
+**Commands**
+ping --> checking connection between two devices 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
