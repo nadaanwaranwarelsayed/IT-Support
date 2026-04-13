@@ -5,16 +5,18 @@ Console cable --> connecting between pc , new router/new switch to program it (R
 Single fiber --> connection between countries , thin , expensive
 Multi fiber --> connection between local devices , thick , less expensive than single
 FastEthernet0 --> the network port in devices 
+**Notes**
 IP address  --> logical address used to identify a device on a network.
 Subnet mask --> defines which part of the IP address belongs to the Network and which part belongs to the host (the device). It determines the size/range of the network
-
-
+server belongs to end devices
+devices request IPs from server so the server must be have Static IP 
 **Commands**
 ping --> checking connection between two devices 
 
-
-
-
+*Technical Notes*
+IPs from 1 --> 10 for router , switches .....(managed)
+        50 --> 100 for servers , printers .....(Static)
+       101 --> 254 for DHCP pool .....(Devices)
 
 
 
