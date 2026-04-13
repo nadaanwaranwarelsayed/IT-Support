@@ -57,6 +57,7 @@ I configured the DHCP pool to start from `192.168.1.101`, reserving the lower ra
 
 ### Results:
 <img width="1038" height="541" alt="03_DHCP_Verification_PC0" src="https://github.com/user-attachments/assets/a1277c25-6ea4-4ea1-8b49-a17d0aaae76e" />
+
 ### Verification & Connectivity Test:
 * Verified that **PC0** successfully leased the first available IP (`192.168.1.101`) from the server.
 * Performed a **Ping test** between the dynamic hosts to ensure that internal routing within the VLAN is fully operational.
