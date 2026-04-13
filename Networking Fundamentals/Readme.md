@@ -29,7 +29,8 @@ In this lab, I compared the data transmission behavior of a **Hub** and a **Swit
 ### Key Observations:
 * **The Hub (Left):** When PC0 sent a message, the Hub flooded it to **all connected devices** (Broadcast). Devices that were not the intended destination rejected the packet (indicated by the red X).
 * **The Switch (Right):** After learning the MAC addresses via ARP, the Switch sent the message **directly to the target device** (Unicast), making the communication more efficient and secure.
-
+* **Collision Domains (Hub):** Operates within a **single collision domain**; only one device can transmit at a time, or a collision occurs.
+* **Collision Domains (Switch):** Each port is a **separate collision domain**, allowing simultaneous, interference-free communication.
 > **Conclusion:** The Switch is "smarter" because it maintains a MAC Address Table, whereas the Hub simply repeats the signal to all ports.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
