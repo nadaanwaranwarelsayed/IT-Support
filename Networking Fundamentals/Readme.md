@@ -31,3 +31,34 @@ In this lab, I compared the data transmission behavior of a **Hub** and a **Swit
 * **The Switch (Right):** After learning the MAC addresses via ARP, the Switch sent the message **directly to the target device** (Unicast), making the communication more efficient and secure.
 
 > **Conclusion:** The Switch is "smarter" because it maintains a MAC Address Table, whereas the Hub simply repeats the signal to all ports.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Lab 03: Network Automation - Implementing DHCP Server
+In this lab, I transitioned from manual IP configuration to dynamic management by implementing a **DHCP Server**. This approach minimizes errors and automates address assignment for all network hosts.
+
+### Task Objectives:
+* Deploy a dedicated **Server-PT** to act as the central authority for IP management.
+* Configure a **DHCP Pool** with a specific address range and lease limits.
+* Transition end-devices (PCs) from **Static** to **Dynamic** IP addressing.
+
+### Server Configuration:
+I configured the DHCP pool to start from `192.168.1.101`, reserving the lower range for infrastructure devices (like Routers and Switches).
+
+<img width="743" height="453" alt="03_DHCP_Server_Configuration" src="https://github.com/user-attachments/assets/5caab964-855b-4602-ac4d-89120d1bda9d" />
+
+
+
+### Key Configurations:
+* **Start IP Address:** `192.168.1.101` (Reserved `1-100` for static management).
+* **Subnet Mask:** `255.255.255.0` (Class C network).
+* **Max Users:** `154` (Calculated based on the available range within the subnet: 254 - 101 + 1).
+
+> **Technical Note:** While the default setting shows 254 or more users, I manually adjusted it to reflect the physical limits of a /24 subnet and my specific reservation plan, ensuring a clean and conflict-free IP environment.
+
+### Results:
+<img width="1038" height="541" alt="03_DHCP_Verification_PC0" src="https://github.com/user-attachments/assets/a1277c25-6ea4-4ea1-8b49-a17d0aaae76e" />
+### Verification & Connectivity Test:
+* Verified that **PC0** successfully leased the first available IP (`192.168.1.101`) from the server.
+* Performed a **Ping test** between the dynamic hosts to ensure that internal routing within the VLAN is fully operational.
+
+> **Final Result:** The implementation was successful, providing a reliable and automated addressing solution for the local network.
