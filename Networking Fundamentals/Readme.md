@@ -1,4 +1,3 @@
-<img width="553" height="387" alt="01_Basic_PC_Connectivity" src="https://github.com/user-attachments/assets/4966f84f-0154-4df7-8059-3cfbe0a8b5b6" />
 # Networking Fundamentals 🌐
 
 ## Lab 01: Basic Connectivity (Handshake)
