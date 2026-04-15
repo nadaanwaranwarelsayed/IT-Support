@@ -12,7 +12,8 @@ Subnet mask --> defines which part of the IP address belongs to the Network and 
 server belongs to end devices
 devices request IPs from server so the server must be have Static IP 
 DNS (domain name system) -->  translates human-readable domain names into machine-readable IP addresses to facilitate network communication
-
+Router --> Connects two different networks, enabling all PCs across those networks to communicate with each other ,
+           Each port on the router acts as a Default Gateway for its connected network 
 **Commands**
 ping --> checking connection between two devices 
 
