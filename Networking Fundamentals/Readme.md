@@ -103,7 +103,7 @@ This project demonstrates the fundamental concepts of connecting two distinct Lo
     - `GigabitEthernet 0/1`: 10.0.0.1
 3. **Dynamic IP Assignment (DHCP):** Configured two DHCP servers to automatically provide IP addresses, Subnet Masks, and Default Gateway info to end devices.
 4. **CLI Configuration:** Utilized the Cisco Command Line Interface (CLI) to manage interfaces and bring the ports up using the `no shutdown` command.
-<img width="681" height="602" alt="router-cli-config" src="https://github.com/user-attachments/assets/ac472402-0da9-4128-a863-cac648334e6d" />
+<img width="651" height="565" alt="router-cli-config" src="https://github.com/user-attachments/assets/353fb930-6321-43ba-bd4f-edfe03fe2493" />
 
 ## Verification
 - Successfully performed a **Ping** test from a PC in Network A (`192.168.1.x`) to a PC in Network B (`10.0.0.x`).
