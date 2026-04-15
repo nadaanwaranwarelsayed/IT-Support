@@ -65,7 +65,6 @@ I configured the DHCP pool to start from `192.168.1.101`, reserving the lower ra
 
 > **Final Result:** The implementation was successful, providing a reliable and automated addressing solution for the local network.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
----
 
 ## Lab 04: Full Network Services Integration (DHCP, DNS, & HTTP)
 In this lab, I integrated three essential network services into a single server to simulate a real-world local network environment. The objective was to demonstrate how these services collaborate to provide a seamless user experience.
@@ -85,7 +84,35 @@ The following image captures the complete integrated setup:
 
 > **Final Outcome:** This lab proves the transition from basic connectivity to a functional service-based network. The integration allows users to access resources intuitively without needing to know the underlying technical IP addresses.
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+# Lab 05: Inter-Networking with a Single Router and DHCP
+
+## Project Overview
+This project demonstrates the fundamental concepts of connecting two distinct Local Area Networks (LANs) using a Cisco Router. The goal was to enable communication between different IP subnets while automating IP address assignment using dedicated DHCP servers for each network.
+
+## Network Topology
+- **Network A:** `192.168.1.0/24` (Subnet for PCs and Local Server)
+- **Network B:** `10.0.0.0/24` (Subnet for PCs and Local Server)
+- **Central Router:** Cisco 2911 ISR, acting as the Default Gateway for both networks.
+
+## Key Features & Configurations
+1. **Multi-Subnet Connectivity:** Established a physical and logical link between two different network addresses using a router.
+2. **Default Gateway Implementation:** Configured specific router interfaces to act as the "exit point" for each network.
+    - `GigabitEthernet 0/0`: 192.168.1.1
+    - `GigabitEthernet 0/1`: 10.0.0.1
+3. **Dynamic IP Assignment (DHCP):** Configured two DHCP servers to automatically provide IP addresses, Subnet Masks, and Default Gateway info to end devices.
+4. **CLI Configuration:** Utilized the Cisco Command Line Interface (CLI) to manage interfaces and bring the ports up using the `no shutdown` command.
+
+## Verification
+- Successfully performed a **Ping** test from a PC in Network A (`192.168.1.x`) to a PC in Network B (`10.0.0.x`).
+- Initial packet loss (ARP resolution) followed by 100% successful ICMP replies.
+<img width="1474" height="471" alt="Routing-Between-Two-Networks" src="https://github.com/user-attachments/assets/0655cf40-75fe-43cf-a6ce-3dba56dfa3e5" />
+
+## Skills Learned
+- Configuring Cisco Router Interfaces via CLI.
+- Understanding the role of the Default Gateway in routing.
+- Troubleshooting APIPA (169.254.x.x) issues by refreshing DHCP leases.
 
 
 
