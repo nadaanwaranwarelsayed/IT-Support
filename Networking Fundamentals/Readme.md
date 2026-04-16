@@ -120,7 +120,6 @@ This project demonstrates the fundamental concepts of connecting two distinct Lo
 
 ## 🚀 Lab 06: Multi-Network Infrastructure & Services Design
 Three-Router Mesh Topology with Static Routing, DHCP, DNS, and HTTP Services
-<img width="838" height="606" alt="Static Routing" src="https://github.com/user-attachments/assets/139d01e2-9181-4d43-a298-31830bf4c142" />
 
 ## 📌 Project Overview
 This project involves the design and implementation of a comprehensive network infrastructure connecting three distinct local area networks (LANs) using Cisco 2911 routers. The system is engineered to provide automated IP addressing (DHCP), domain name resolution (DNS), and web hosting (HTTP), ensuring seamless end-to-end connectivity across all subnets through manually configured Static Routes.
