@@ -14,6 +14,14 @@ devices request IPs from server so the server must be have Static IP
 DNS (domain name system) -->  translates human-readable domain names into machine-readable IP addresses to facilitate network communication
 Router --> Connects two different networks, enabling all PCs across those networks to communicate with each other ,
            Each port on the router acts as a Default Gateway for its connected network 
+CLI commands for configure the router :
+      1- enable   (en)                                                 |         1- enable     
+      2- configure terminal      (conf t)                              |         2- configure terminal
+      3- interface GigabitEthernet 0/0     (int g0/0)                  |         3- interface GigabitEthernet 0/0 
+      4- ip address 'router IP' 'subnet mask'  (ip add [IP] [Mask])    |         4- ip address 'router IP' 'subnet mask'
+      5- no shutdown          (no shut)                                |         5- no shutdown
+      6- do write              (do wr)                                 |         6- exit
+      7- exit                                                          |         7- copy running-config startup-config (write)
 **Commands**
 ping --> checking connection between two devices 
 
