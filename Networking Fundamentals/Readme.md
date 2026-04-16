@@ -1,4 +1,4 @@
-# Networking Fundamentals 🌐
+<img width="783" height="548" alt="web browser test" src="https://github.com/user-attachments/assets/0084ec1a-eaff-4948-8df5-a45636cdafeb" /># Networking Fundamentals 🌐
 
 ## Lab 01: Basic Connectivity (Handshake)
 In this lab, I established a connection between two PCs to test the basic networking concepts.
@@ -118,52 +118,106 @@ This project demonstrates the fundamental concepts of connecting two distinct Lo
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+## 🚀 Lab 06: Multi-Network Infrastructure & Services Design
+Three-Router Mesh Topology with Static Routing, DHCP, DNS, and HTTP Services
+<img width="838" height="606" alt="Static Routing" src="https://github.com/user-attachments/assets/139d01e2-9181-4d43-a298-31830bf4c142" />
+
+## 📌 Project Overview
+This project involves the design and implementation of a comprehensive network infrastructure connecting three distinct local area networks (LANs) using Cisco 2911 routers. The system is engineered to provide automated IP addressing (DHCP), domain name resolution (DNS), and web hosting (HTTP), ensuring seamless end-to-end connectivity across all subnets through manually configured Static Routes.
+
+## 🏗 Network Topology (Architecture)
+The network utilizes a Full Mesh Triangle Topology between the routers to ensure high availability and redundant paths.
+
+<img width="838" height="606" alt="Static Routing" src="https://github.com/user-attachments/assets/6bb6d691-1dd1-4815-9b3c-7e60e101351a" />
+
+Description: Diagram showing the 3-router interconnection with all links active (green).
+
+## 🛠 Configuration Steps & Implementation
+1. Local Area Network (LAN) & DHCP Setup
+Three distinct subnets were created, each managed by a dedicated DHCP server to automate IP distribution for host devices:
+
+Subnet 0 (192.168.1.0/24):
+
+Server 0 (DNS/HTTP): 192.168.1.50 (Static)
+
+DHCP Range: 192.168.1.51 - 192.168.1.254
+
+Default Gateway: 192.168.1.1
+
+Subnet 1 (10.0.0.0/24):
+
+Server 1 (DHCP): 10.0.0.50 (Static)
+
+DHCP Range: 10.0.0.51 - 10.0.0.254
+
+Default Gateway: 10.0.0.1
+
+Subnet 2 (172.16.0.0/24):
+
+Server 2 (DHCP): 172.16.0.50 (Static)
+
+DHCP Range: 172.16.0.51 - 172.16.0.254
+
+Default Gateway: 172.16.0.1
+
+Note: All end-devices (PCs) were toggled from Static to DHCP mode to refresh their IP leases and receive the updated Gateway and DNS parameters.
+
+2. Router Interface Configuration (Point-to-Point Links)
+The router interfaces were configured to establish the "highways" between the branches:
+
+Link (R0 ↔ R1): Subnet 180.170.1.0/24 | Interface IPs: .1 & .2
+
+Link (R0 ↔ R2): Subnet 150.140.0.0/24 | Interface IPs: .5 & .6
+
+Link (R1 ↔ R2): Subnet 160.150.1.0/24 | Interface IPs: .8 & .9
+
+3. Static Routing Implementation
+To enable inter-VLAN communication, static routes were manually added to each router's routing table:
+
+Router 0:
+ip route 10.0.0.0 255.255.255.0 180.170.1.2    # Path to Subnet 1
+ip route 172.16.0.0 255.255.255.0 150.140.0.6  # Path to Subnet 2
+Router 1:
+Bash
+ip route 192.168.1.0 255.255.255.0 180.170.1.1  # Path to Subnet 0
+ip route 172.16.0.0 255.255.255.0 160.150.1.9   # Path to Subnet 2
+Router 2:
+Bash
+ip route 192.168.1.0 255.255.255.0 150.140.0.5  # Path to Subnet 0
+ip route 10.0.0.0 255.255.255.0 160.150.1.8     # Path to Subnet 1
+4. Application Layer Services (DNS & HTTP)
+Web Hosting: HTTP and HTTPS services were enabled on Server 0 to host the www.nada.com domain.
+
+Centralized DNS: Server 0 was configured as the primary DNS resolver for the entire infrastructure.
+
+Global Configuration: The DNS IP 192.168.1.50 was propagated via DHCP across all three subnets, allowing any PC in the mesh to resolve the domain name.
+
+## 🔍 Troubleshooting & Validation
+During the implementation phase, several network issues were identified and resolved:
+
+Inconsistent Addressing: Corrected subnet masks and network IDs to align with routing logic.
+
+Default Gateway Omission: Fixed "Request Timeout" issues by assigning the proper router interface IP as the Default Gateway in the DHCP pools.
+
+DNS Reachability: Resolved "DNS Request Timed Out" by ensuring Server 0 had a proper return path to all subnets and updating the DNS server field in remote DHCP scopes.
+
+Service Sync: Toggled PCs from Static to DHCP to ensure they received updated DNS and Gateway settings.
+
+Content Customization: Successfully edited the index.html file on Server 0 to display personalized project content via the Web Browser.
+
+Final Testing Results:
+ICMP Connectivity (Ping): ✅ Successful replies between all remote hosts.
+<img width="939" height="513" alt="ping from PC0 to subnets PCs" src="https://github.com/user-attachments/assets/787fe8c4-f607-47aa-8c87-a411c2bb6c48" />
+
+DNS Resolution (nslookup): ✅ www.nada.com successfully resolves to 192.168.1.50.
+<img width="911" height="572" alt="DNS test from PC2" src="https://github.com/user-attachments/assets/5aa77a30-db2a-4ea8-9c74-ed5dc82698a9" />
+
+Web Browser Verification: ✅ Website content successfully loads from all remote workstations.
+<img width="783" height="548" alt="web browser test" src="https://github.com/user-attachments/assets/9d5d08f5-6cef-4a10-a286-5daf0398fb49" />
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-عملت اول سيرفر الاي بي بتاعه 192.168.1.50 والسبنت ماسك 255.255.255.0 وهو ستتاتيك وبعد كده روحت عالسيرفيسيس وفعلت الدي اتش سي بي وخليت الستارت اي بي ادريس 192.168.1.51 والسبنت ماسك 255.255.255.0 واليوزرز 205 (254-250+1)  
-وروحت لكل بي سي خليت الاي بي بتاعهم ديناميك مش ستاتيك وبالفعل اخدوا اي بي 51 و 52
-نفس الكلام عملته ف السيرفر التاني بس الاي بي بتاعه 10.0.0.50 والسبنت ماسك 255.255.255.0 وبعدين روحت عالسيرفيسيس فعلت الدي اتش سي بي وخليته ستارت فروم 10.0.0.51 والماكس يوزرز 205 والسبنت 255.255.255.0 
-وروحت عالبي سيز بتاعت تاني شبكة دي وفعلت الدي اتش سي بي واخدوا فعلا اي بيهات 51 و 52 
-والشبكة التالتة عملت نفس الكلام بس خليت اي بي السيرفر 172.16.0.50 والسبنت ماسك 255.255.255.0 
-وبعدين روحت عالسيرفيسيس وفعلت الدي اتش سي بي وستارت فروم 172.16.0.51 والسبنت ماسك 255.255.255.0 وروحت عالبي سيز فعلت الدي اتش سي بي واخدوا ايبيهات 51 و52 
-عشان اعمل دي ان اس عملتها ف الشبكة الاولي علي سيرفر 0 دخلت علي سيرفيسيس وفعلت الدي ان اس وسميت اسم الموقع بتاعي ف النيم وبعدين ف الادريس كتبت الاي بي بتاع السيرفر نفسه وبعدين روحت عالدي اتش سي بي بتاع نفس السيرفر وف خانة الدي ان اس كتبت اي بي السيرفر 192.168.1.50 وبس رجعت للاجهزة تاني غيرت من ديناميك لستاتيك وبعدين من ستاتيك لديناميك تاني واخدوا اي بي تلقائي والدي ان اس تلقائي 
-واتأكدت ان ف السيرفر الhttp,https معمولين on 
-
-روحت لاول راوتر دخلت ف CLI كتبت  enable , configure terminal , interface g0/0 , ip address 192.168.1.1 255.255.255.0 , no shutdown , do write exit كده انا شغلت الطريق بين راوتر 0 وسويتش 0 اللي ف شبكته 
-هروح بقي لتاني راوتر اللي هو راوتر 1 وعملت نفس الخطوات بالظبط بس الاي بي ادتهوله 100.0.0.1 وبعدين افتكرت اني غلط شبكتي دي اصلا بتبتدي ب10.0.0 ف عوزت اعدل الاي بي ف عملت interface g0/0  
-وعملت no ip address وبعدين عملت ip address 10.0.0.1 255.255.255.0 وبعدين عشان اتأكد انه اتعمل بعمل exit لحد ما اوصل لrouter# واكتب show ip interface brief واتأكدت انه اتعدل وبكده ابقي ربطت بين راوتر 1 وسويتش شبكته 
-عايزة اربط بقي بين راوتر 0 وراوتر 1 ف هعمل كده : 
-هدخل علي راوتر 0 ف السي ال اي اعرف الاي بي بتاع الطريق اللي رايح من راوتر 0رلراوتر 1 
-enable , configure terminal , interface g0/1 , ip address 180.170.1.1 255.255.255.0 , no shutdown exit 
-وروحت للراوتر 1 عملت نفس الكلام بالظبط بس اديتله الاي بي 180.170.1.2 والنور بين راوتر 0 وراوتر 1 نور اخضر اهو
-يعني كده التوصيلة الفيزيكال بينهم نجحت هخلي بقي الاجهزة تقدر تكلم بعض هروح لراوتر 0: 
-
-
-
-
-
-عايزة دلوقتي بقي اشغل التوصيلة بين راوتر 2 والسويتش بتاع شبكته : 
-روحت لراوتر 2 في السي ال اي بتاعه  وعملت enable , configure terminal , interface g 0/0 اللي هو البورت بتاع الراوتر نفسه من ناحية السويتش , ip address 172.16.0.1 255.255.255.0 ده اي بي الراوتر نفسه , no shutdown , do write ,  exit والتوصيلة اخضرت بين السويتش وراوتر 2 كده هربط بقي بين راوتر 0 و 2 وراوتر 1 و 2 
-عشان اربط بين راوتر 0 وراوتر 2 محتاجة اعرف الطريق بينهم ف روحت عند cli راوتر 0 وعملت ip address 150.140.0.5 255.255.255.0 وبقيت الخطوات المعروفة قبل وبعد 
-وروحت عند راوتر 2 ف الCLI عملت ip address 150.140.0.6 وبقيت الخطوات التقليدية قبل وبعد والتوصيلة خضرا بين راوتر 0و2 
-روحت لراوتر 1 
-وكتبت كلمة enable غلط ف فكر انها دي ان اس وفضل يدور ف دوست ctrl+shift+6 عشان اخرج من الدوامة دي
-وعملت ip address للبورت اللي رايح علي راوتر 2 ip address 160.150.1.8 255.255.255.0 
-وعملت  ف راوتر 2 ip address 160.150.1.9 255.255.255.0 
-عشان اخلي اجزة الشبكة 0 والشبكة 2 يكلموا بعض : 
-enable , configure terminal , ip route 172.16.0.0 255.255.255.0 150.140.0.6 , no shutdown , do write , exit 
-وهروح بقي راوتر 2 اشغل من جهته بس عملت ip route 150.140.0.5 
-كنت ناسية الديفولت جيت واي خالص ف البي سيز مكانتش شايفة بعض فروحت عند كل سيرفر وحطيت ف خانة الديفولت جيت واي الاي بي بتاع الراوتر بتاع كل شبكة من الشبكات دي 
-
-انا كده لحد دلوقتي عملت الاي بي روت بين راوتر 0 وراوتر 2 
-هعملها بقي بين راوتر 0 وراوتر 1 هروح عند راوتر 0 واعمل ip route 10.0.0.0 255.255.255.0 180.170.1.2  
-وروحت عند راوتر 1 عملت ip route 192.168.1.0 255.255.255.0 180.170.1.1 واختبرت ببينج بين الشبكة 1 والشبكة 0 ورد عليا وكنت مختبرة برضو بين الشبكة 2 والشبكة 0 ورد عليا 
-بين راوتر 1 و 2 
-روحت لراوتر 1 عملت ip route 172.16.0.0. 255.255.255.0 160.150.1.9 
-
-روحت لراوتر 2 وعملت ip route 10.0.0.0 255.255.255.0 160.150.1.8  
-كمان اكتشفت اني مكنتش عاملة للسيرفرات الديفولت جيت واي بتاعت الراوتر بتاع كل شبكة ف البي سيز ف الشبكات التانية مقدروش يتعرفوا عالسيرفر الللي فيه الدي ان اس بتاع الشبكة 0 
-وكمان مكنتش حاطة الدي ان اس ادريس ف كل السيرفرات ولازم لما نغير حاجة ف الDHCP server نروح لكل البي سيز ونغير من ديناميك لستاتيك وبعدين نرجع من ستاتيك لديناميك عشان يشوفوا التغييرات 
 
 
 
