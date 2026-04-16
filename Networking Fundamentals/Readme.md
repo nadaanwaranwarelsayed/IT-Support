@@ -1,4 +1,3 @@
-<img width="783" height="548" alt="web browser test" src="https://github.com/user-attachments/assets/0084ec1a-eaff-4948-8df5-a45636cdafeb" /># Networking Fundamentals 🌐
 
 ## Lab 01: Basic Connectivity (Handshake)
 In this lab, I established a connection between two PCs to test the basic networking concepts.
@@ -174,16 +173,23 @@ Link (R1 ↔ R2): Subnet 160.150.1.0/24 | Interface IPs: .8 & .9
 To enable inter-VLAN communication, static routes were manually added to each router's routing table:
 
 Router 0:
+
 ip route 10.0.0.0 255.255.255.0 180.170.1.2    # Path to Subnet 1
+
 ip route 172.16.0.0 255.255.255.0 150.140.0.6  # Path to Subnet 2
+
 Router 1:
-Bash
+
 ip route 192.168.1.0 255.255.255.0 180.170.1.1  # Path to Subnet 0
+
 ip route 172.16.0.0 255.255.255.0 160.150.1.9   # Path to Subnet 2
+
 Router 2:
-Bash
+
 ip route 192.168.1.0 255.255.255.0 150.140.0.5  # Path to Subnet 0
+
 ip route 10.0.0.0 255.255.255.0 160.150.1.8     # Path to Subnet 1
+
 4. Application Layer Services (DNS & HTTP)
 Web Hosting: HTTP and HTTPS services were enabled on Server 0 to host the www.nada.com domain.
 
