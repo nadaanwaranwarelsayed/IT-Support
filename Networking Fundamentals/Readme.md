@@ -221,11 +221,83 @@ Web Browser Verification: ✅ Website content successfully loads from all remote
 <img width="783" height="548" alt="web browser test" src="https://github.com/user-attachments/assets/9d5d08f5-6cef-4a10-a286-5daf0398fb49" />
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## 🚀 Lab 07: Site-to-Site Enterprise Network & OSPF Routing
+Two-Branch Infrastructure with Dynamic OSPF Routing and VLSM Optimization
+
+## 📌 Project Overview
+This project involves the design and implementation of a scalable enterprise network connecting two main branches: Smouha Branch and the Head Office. The system is engineered using Cisco 2911 routers to ensure seamless data flow through the OSPF (Open Shortest Path First) dynamic routing protocol. The infrastructure focuses on VLSM (Variable Length Subnet Masking) to optimize IP address allocation, specifically using /30 subnets for point-to-point wide area network (WAN) links.
+
+## 🏗 Network Topology (Architecture)
+The network utilizes a Point-to-Point topology between the branches, ensuring a dedicated and efficient path for inter-branch communication.
+
+<img width="402" height="412" alt="Site-to-Site OSPF Topology" src="https://github.com/user-attachments/assets/64937766-650c-4a60-a6d3-ee1c219bbf8e" />
 
 
+Description: Diagram showing the interconnection between Smouha Branch (R1) and Head Office (R2).
+
+## 🛠 Configuration Steps & Implementation
+1. Local Area Network (LAN) Configuration
+Two distinct subnets were established to represent the internal infrastructure of each branch:
+
+Smouha Branch (LAN 0):
+
+Subnet: 192.168.1.0/24
+
+Host PC (PC0): 192.168.1.10
+
+Default Gateway: 192.168.1.1 (Configured on R1 G0/0)
+
+Head Office (LAN 1):
+
+Subnet: 192.168.2.0/24
+
+Host PC (PC4): 192.168.2.10
+
+Default Gateway: 192.168.2.1 (Configured on R2 G0/0)
+
+2. Router Interface Configuration (Point-to-Point WAN Link)
+The WAN link was configured using a /30 subnet to maximize IP efficiency for the router-to-router connection:
+
+Link (Smouha ↔ Head Office): Subnet 10.0.0.0/30
+
+Interface IP (R1 G0/1): 10.0.0.1
+
+Interface IP (R2 G0/1): 10.0.0.2
+
+Subnet Mask: 255.255.255.252
+
+3. Dynamic Routing Implementation (OSPF)
+To automate route discovery and ensure network scalability, OSPF Area 0 was implemented on both routers:
+
+Smouha Router (R1):
+CLI :
+router ospf 1
+ network 192.168.1.0 0.0.0.255 area 0
+ network 10.0.0.0 0.0.0.3 area 0
+Head Office Router (R2):
+
+CLI :
+router ospf 1
+ network 192.168.2.0 0.0.0.255 area 0
+ network 10.0.0.0 0.0.0.3 area 0
+ 
+<img width="770" height="480" alt="OSPF Routing Table Verification" src="https://github.com/user-attachments/assets/ee1e695a-0ef1-481d-8b1a-f8dcefc8ebdd" />
+
+This screenshot verifies that the OSPF protocol is active. The entries marked with 'O' indicate that the router has successfully learned the remote networks from its neighbor. 
+
+## 🔍 Troubleshooting & Validation
+During the validation phase, the following tests were conducted to ensure network integrity:
+
+Adjacency Check: Verified that OSPF neighbors reached the "FULL" state, allowing for successful routing table exchange.
+
+Convergence: Used the "Fast Forward Time" feature in Packet Tracer to speed up OSPF Hello packet exchange and synchronization.
+
+Route Verification: Confirmed that the remote LAN subnets were correctly injected into the routing table with the "O" designator.
+
+Final Testing Results:
+ICMP Connectivity (Ping): ✅ Successful replies from PC0 (Smouha) to PC4 (Head Office) with 0% loss.
+<img width="621" height="298" alt="ping dynamic routing" src="https://github.com/user-attachments/assets/801eda6b-5747-4b5e-bdeb-74e7f94d023f" />
 
 
-
-
-
-
+Path Tracing (Tracert): ✅ Confirmed the data path through 3 hops: Gateway ➡️ WAN Link ➡️ Remote Host.
+<img width="504" height="158" alt="tracert dynamic routing" src="https://github.com/user-attachments/assets/a5e49be6-b4ad-431c-bd5b-ea23d8f79211" />
