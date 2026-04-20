@@ -272,14 +272,19 @@ To automate route discovery and ensure network scalability, OSPF Area 0 was impl
 Smouha Router (R1):
 CLI :
 router ospf 1
- network 192.168.1.0 0.0.0.255 area 0
- network 10.0.0.0 0.0.0.3 area 0
+
+network 192.168.1.0 0.0.0.255 area 0
+
+network 10.0.0.0 0.0.0.3 area 0
+
 Head Office Router (R2):
 
 CLI :
 router ospf 1
- network 192.168.2.0 0.0.0.255 area 0
- network 10.0.0.0 0.0.0.3 area 0
+
+network 192.168.2.0 0.0.0.255 area 0
+
+network 10.0.0.0 0.0.0.3 area 0
  
 <img width="770" height="480" alt="OSPF Routing Table Verification" src="https://github.com/user-attachments/assets/ee1e695a-0ef1-481d-8b1a-f8dcefc8ebdd" />
 
@@ -295,9 +300,9 @@ Convergence: Used the "Fast Forward Time" feature in Packet Tracer to speed up O
 Route Verification: Confirmed that the remote LAN subnets were correctly injected into the routing table with the "O" designator.
 
 Final Testing Results:
-ICMP Connectivity (Ping): ✅ Successful replies from PC0 (Smouha) to PC4 (Head Office) with 0% loss.
 <img width="621" height="298" alt="ping dynamic routing" src="https://github.com/user-attachments/assets/801eda6b-5747-4b5e-bdeb-74e7f94d023f" />
+ICMP Connectivity (Ping): ✅ Successful replies from PC0 (Smouha) to PC4 (Head Office) with 0% loss.
 
 
-Path Tracing (Tracert): ✅ Confirmed the data path through 3 hops: Gateway ➡️ WAN Link ➡️ Remote Host.
 <img width="504" height="158" alt="tracert dynamic routing" src="https://github.com/user-attachments/assets/a5e49be6-b4ad-431c-bd5b-ea23d8f79211" />
+Path Tracing (Tracert): ✅ Confirmed the data path through 3 hops: Gateway ➡️ WAN Link ➡️ Remote Host.
