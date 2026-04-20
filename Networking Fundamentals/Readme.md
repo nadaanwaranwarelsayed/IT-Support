@@ -309,4 +309,5 @@ ICMP Connectivity (Ping): ✅ Successful replies from PC0 (Smouha) to PC4 (Head 
 
 <img width="504" height="158" alt="tracert dynamic routing" src="https://github.com/user-attachments/assets/a5e49be6-b4ad-431c-bd5b-ea23d8f79211" />
 
+
 Path Tracing (Tracert): ✅ Confirmed the data path through 3 hops: Gateway ➡️ WAN Link ➡️ Remote Host.
