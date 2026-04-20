@@ -236,6 +236,7 @@ The network utilizes a Point-to-Point topology between the branches, ensuring a 
 Description: Diagram showing the interconnection between Smouha Branch (R1) and Head Office (R2).
 
 ## 🛠 Configuration Steps & Implementation
+
 1. Local Area Network (LAN) Configuration
 Two distinct subnets were established to represent the internal infrastructure of each branch:
 
@@ -290,6 +291,7 @@ network 10.0.0.0 0.0.0.3 area 0
 
 This screenshot verifies that the OSPF protocol is active. The entries marked with 'O' indicate that the router has successfully learned the remote networks from its neighbor. 
 
+
 ## 🔍 Troubleshooting & Validation
 During the validation phase, the following tests were conducted to ensure network integrity:
 
@@ -301,8 +303,10 @@ Route Verification: Confirmed that the remote LAN subnets were correctly injecte
 
 Final Testing Results:
 <img width="621" height="298" alt="ping dynamic routing" src="https://github.com/user-attachments/assets/801eda6b-5747-4b5e-bdeb-74e7f94d023f" />
+
 ICMP Connectivity (Ping): ✅ Successful replies from PC0 (Smouha) to PC4 (Head Office) with 0% loss.
 
 
 <img width="504" height="158" alt="tracert dynamic routing" src="https://github.com/user-attachments/assets/a5e49be6-b4ad-431c-bd5b-ea23d8f79211" />
+
 Path Tracing (Tracert): ✅ Confirmed the data path through 3 hops: Gateway ➡️ WAN Link ➡️ Remote Host.
