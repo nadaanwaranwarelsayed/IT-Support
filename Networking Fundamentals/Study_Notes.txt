@@ -24,7 +24,8 @@ OSPF --> protocol depends on the speed (cost)
 the 
 OSPF always choose the high speed way , RIPv2 always choose the little hops way even if it less speed 
 Use /30 (255.255.255.252) for point-to-point links to save IP addresses by providing only 2 usable hosts. For OSPF configuration, the Wildcard Mask for this subnet is 0.0.0.3
-
+255.255.255.252 = /30 --> 2power 2 = 4 duplicates of 4 rejected 
+                = /29 --> 2 power 3 = 8 duplicates of 8 rejectes
 CLI commands for configure the static router :
       1- enable   (en)                                                 |         1- enable     
       2- configure terminal      (conf t)                              |         2- configure terminal
