@@ -371,6 +371,7 @@ network 10.0.0.8 0.0.0.3 area 0
 
 <img width="801" height="508" alt="OSPF-Routing-Table-Verification" src="https://github.com/user-attachments/assets/7f42de51-760f-4420-8982-753398d34440" />
 
+**Note:** The 'O' prefix observed in the routing table (as shown above) confirms successful OSPF adjacency and dynamic route injection between the three branches.
 
 
 ## 🔍 Troubleshooting & Validation
