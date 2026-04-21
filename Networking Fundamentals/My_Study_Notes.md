@@ -1,6 +1,6 @@
-📝 My Networking Study Notes
+## 📝 My Networking Study Notes
 
-🔌 Connections & Cables
+## 🔌 Connections & Cables
 
 Copper Cross-over: Used to connect two devices of the same type (PC to PC, Router to Router).
 
@@ -14,7 +14,7 @@ Multi fiber: For local devices (inside buildings). Thicker and more affordable t
 
 FastEthernet0: The standard network port found on most devices.
 
-💡 General Notes
+## 💡 General Notes
 
 IP address: The logical address used to identify a device on a network.
 
@@ -28,7 +28,7 @@ DNS (Domain Name System): Translates names we remember (nada.com) into IP addres
 
 Router: Connects different networks. Each port on the router acts as the Default Gateway for that specific network.
 
-🛣 Dynamic Routing Protocols
+## 🛣 Dynamic Routing Protocols
 
 RIPv2: Depends on Hops (how many routers are in the way).
 
@@ -42,13 +42,13 @@ Old link (Slow) = Very high cost (e.g., 100).
 
 Rule: OSPF always picks the fastest path, while RIPv2 always picks the path with the fewest routers—even if it's much slower.
 
-🔢 Subnetting & OSPF Tricks
+## 🔢 Subnetting & OSPF Tricks
 
 VLSM /30: We use the mask 255.255.255.252 for point-to-point links (between routers) to save IPs. It gives only 2 usable hosts.
 
 Wildcard Mask: Used in OSPF configuration. For a /30 subnet, the wildcard is 0.0.0.3.
 
-💻 CLI Quick Guide
+## 💻 CLI Quick Guide
 
 To configure the router:
 
@@ -64,7 +64,7 @@ no shut (The most important command to turn the port on!)
 
 do wr (to save your work so it doesn't get deleted after a restart)
 
-🎯 IP Planning (Technical Tips)
+## 🎯 IP Planning (Technical Tips)
 
 .1 --> .10: Reserved for infrastructure (Routers, Switches).
 
@@ -72,7 +72,7 @@ do wr (to save your work so it doesn't get deleted after a restart)
 
 .101 --> .254: Reserved for the DHCP Pool (User devices).
 
-🔍 Verification Tools
+## 🔍 Verification Tools
 
 ping: To check if two devices can "see" each other.
 
