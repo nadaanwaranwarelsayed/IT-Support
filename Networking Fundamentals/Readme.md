@@ -313,4 +313,118 @@ ICMP Connectivity (Ping): ✅ Successful replies from PC0 (Smouha) to PC4 (Head 
 
 Path Tracing (Tracert): ✅ Confirmed the data path through 3 hops: Gateway ➡️ WAN Link ➡️ Remote Host.
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 🚀 Lab 08: Distributed Enterprise Mesh & Advanced OSPF Routing
+Full-Mesh Triangle Infrastructure with Multi-Branch Services (DHCP, DNS, HTTP)
+
+## 📌 Project Overview
+This project demonstrates the design of a highly redundant enterprise network connecting three main branches in Alexandria (Smouha, Miami, and Centre). The architecture utilizes a Full-Mesh Triangle Topology to ensure multiple paths for data flow, managed by the OSPF dynamic routing protocol. The project focuses on "Distributed Services," where network functions (DNS and HTTP) are strategically placed across different branches to simulate a real-world enterprise environment.
+
+## 🏗 Network Topology (Architecture)
+The network is built using three Cisco routers connected in a triangle formation. This design ensures that if any single WAN link fails, OSPF will automatically reroute traffic through the alternative path.
+
+
+<img width="690" height="651" alt="Triangle-Mesh-Topology-Overview" src="https://github.com/user-attachments/assets/2c711c58-e842-456f-9a54-68b17ee3c33d" />
+
+
+Description: Full-Mesh interconnection between Smouha, Miami, and Centre routers with active OSPF adjacencies.
+
+## 🛠 Configuration Steps & Implementation
+
+1. VLSM & IP Addressing Scheme
+To maximize efficiency, VLSM was applied using /30 subnets for the point-to-point WAN links, providing exactly 2 usable IPs per link:
+
+Link Smouha ↔ Miami: 10.0.0.0/30 (IPs: .1, .2)
+
+Link Miami ↔ Centre: 10.0.0.4/30 (IPs: .5, .6)
+
+Link Centre ↔ Smouha: 10.0.0.8/30 (IPs: .9, .10)
+
+2. Distributed Application Services
+Unlike centralized designs, services were distributed across branches to optimize resource allocation:
+
+Smouha Branch: Hosts the HTTP Web Server (192.168.10.50) containing the project's landing page.
+
+Miami Branch: Hosts the Centralized DNS Server (192.168.20.50) responsible for resolving www.nada.com.
+
+<img width="791" height="524" alt="DNS-Record-Configuration" src="https://github.com/user-attachments/assets/8a94129d-d9d9-4ab0-b3b5-13dd4691735d" />
+
+
+All Branches: Each branch has a local DHCP Pool configured to provide Gateway and the global DNS IP (192.168.20.50) to all end-devices.
+
+3. Dynamic Routing (OSPF Area 0)
+OSPF was implemented to automate route discovery. Wildcard masks were carefully calculated to match the /30 WAN links (0.0.0.3) and /24 LANs (0.0.0.255).
+
+Sample Configuration (Smouha Router):
+
+CLI :
+
+router ospf 1
+
+network 192.168.10.0 0.0.0.255 area 0
+
+network 10.0.0.0 0.0.0.3 area 0
+
+network 10.0.0.8 0.0.0.3 area 0
+
+
+<img width="801" height="508" alt="OSPF-Routing-Table-Verification" src="https://github.com/user-attachments/assets/7f42de51-760f-4420-8982-753398d34440" />
+
+
+
+## 🔍 Troubleshooting & Validation
+
+Several critical network challenges were addressed during the testing phase:
+
+IP Conflict Resolution: Resolved a Duplicate Address error on the Miami-Smouha link by re-assigning unique IPs within the /30 range.
+
+DNS Latency/Timeout: Fixed a "DNS Request Timed Out" issue by correcting the DNS server IP in the DHCP scopes from .100 to the actual server IP .50.
+
+Routing Path Verification: Confirmed that traffic from the Centre Branch can reach the Smouha Web Server using the OSPF-learned paths.
+
+Final Testing Results:
+
+
+<img width="783" height="475" alt="DNS-Resolution-Test ,End-to-End-Connectivity-Ping " src="https://github.com/user-attachments/assets/8c5a4cac-42b9-4fc9-97fa-0d505f58ad5e" />
+
+ICMP Connectivity: ✅ 100% success rate in Pings across all branches.
+DNS Resolution: ✅ nslookup www.nada.com correctly resolves to the Smouha Server IP (192.168.10.50).
+
+
+<img width="805" height="522" alt="Web-Service-Final-Verification" src="https://github.com/user-attachments/assets/2a24a8d7-8757-462e-bdc1-d80c038ead40" />
+
+
+Web Services: ✅ The "Welcome to Nada's Network" HTML page loads successfully on all remote workstations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
