@@ -380,11 +380,36 @@ Several critical network challenges were addressed during the testing phase:
 
 IP Conflict Resolution: Resolved a Duplicate Address error on the Miami-Smouha link by re-assigning unique IPs within the /30 range.
 
-DNS Latency/Timeout: Fixed a "DNS Request Timed Out" issue by correcting the DNS server IP in the DHCP scopes from .100 to the actual server IP .50.
+DNS Latency/Timeout:
+Fixed a "DNS Request Timed Out" issue by correcting the DNS server IP in the DHCP scopes from .100 to the actual server IP .50.
 
-Routing Path Verification: Confirmed that traffic from the Centre Branch can reach the Smouha Web Server using the OSPF-learned paths.
+Routing Path Verification:
+Confirmed that traffic from the Centre Branch can reach the Smouha Web Server using the OSPF-learned paths.
 
-Final Testing Results:
+High Availability & OSPF Convergence Test:
+To verify the network's resilience, a "Link Failure" was simulated by removing the direct cable between the Centre and Smouha routers.
+
+
+<img width="578" height="485" alt="Tracert lab 8" src="https://github.com/user-attachments/assets/03833406-5424-4b07-9699-8927693854e8" />
+
+
+
+
+Before Failure: Traffic took the shortest path (3 hops) via the 10.0.0.9 link.
+
+
+
+<img width="666" height="458" alt="Tracert after link failure" src="https://github.com/user-attachments/assets/1b1353a4-cca0-4335-9709-21bff81000e1" />
+
+After Failure: OSPF dynamically recalculated the best path, rerouting traffic through the Miami branch (10.0.0.5 ➡️ 10.0.0.1).
+
+Result: Connectivity remained active with zero packet loss, proving the redundancy of the triangle mesh topology.
+
+
+
+
+
+## Final Testing Results:
 
 
 <img width="783" height="475" alt="DNS-Resolution-Test ,End-to-End-Connectivity-Ping " src="https://github.com/user-attachments/assets/8c5a4cac-42b9-4fc9-97fa-0d505f58ad5e" />
@@ -397,6 +422,7 @@ DNS Resolution: ✅ nslookup www.nada.com correctly resolves to the Smouha Serve
 
 
 Web Services: ✅ The "Welcome to Nada's Network" HTML page loads successfully on all remote workstations.
+
 
 
 
