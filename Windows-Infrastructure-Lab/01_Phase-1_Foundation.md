@@ -23,4 +23,28 @@ Below is a comprehensive summary of the Virtual Machine settings before the OS i
 <img width="1135" height="549" alt="1" src="https://github.com/user-attachments/assets/ef61869a-58f3-4efe-b0d0-ad9cddc35f48" />
 
 
+#### **Step 2: Operating System Installation**
+After configuring the virtual hardware, I proceeded with the manual installation of **Windows Server 2022**. 
 
+* **Version Selected:** Windows Server 2022 Standard Evaluation (Desktop Experience).
+  
+  <img width="861" height="653" alt="3" src="https://github.com/user-attachments/assets/ab4d036e-b230-4969-bc15-70851bcb20bd" />
+
+* **Installation Type:** Custom (Advanced) to ensure a clean installation on the unallocated 50GB space.
+  
+<img width="890" height="736" alt="4" src="https://github.com/user-attachments/assets/8fdf1621-e053-430e-8bb4-74453aa2195f" />
+
+*Caption: Choosing the Desktop Experience to ensure a GUI is available for administration.*
+
+<img width="832" height="671" alt="5" src="https://github.com/user-attachments/assets/2b0f2c2e-6529-4dca-8ffc-9cd73a8d2bb7" />
+
+*Caption: Allocating the full 50GB drive for the primary system partition.*
+
+#### **Step 3: Post-Installation & Initial Setup**
+Once the installation was complete, I performed the following essential administrative tasks:
+
+1.  **Administrator Account Setup:** Created a secure password for the built-in Administrator account.
+2.  **Server Renaming:** Changed the default computer name to `DC-MASTER` for better identification within the domain.
+3.  **Static IP Configuration:** Assigned a manual IPv4 address to ensure consistent network connectivity for future Domain Services.
+
+<img width="100%" alt="Administrator Setup" src="رابط_صورة_شاشة_الباسورد" />
