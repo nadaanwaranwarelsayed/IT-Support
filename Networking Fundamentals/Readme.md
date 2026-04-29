@@ -117,20 +117,20 @@ This project demonstrates the fundamental concepts of connecting two distinct Lo
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## 🚀 Lab 06: Multi-Network Infrastructure & Services Design
+## Lab 06: Multi-Network Infrastructure & Services Design
 Three-Router Mesh Topology with Static Routing, DHCP, DNS, and HTTP Services
 
-## 📌 Project Overview
+## Project Overview
 This project involves the design and implementation of a comprehensive network infrastructure connecting three distinct local area networks (LANs) using Cisco 2911 routers. The system is engineered to provide automated IP addressing (DHCP), domain name resolution (DNS), and web hosting (HTTP), ensuring seamless end-to-end connectivity across all subnets through manually configured Static Routes.
 
-## 🏗 Network Topology (Architecture)
+## Network Topology (Architecture)
 The network utilizes a Full Mesh Triangle Topology between the routers to ensure high availability and redundant paths.
 
 <img width="838" height="606" alt="Static Routing" src="https://github.com/user-attachments/assets/6bb6d691-1dd1-4815-9b3c-7e60e101351a" />
 
 Description: Diagram showing the 3-router interconnection with all links active (green).
 
-## 🛠 Configuration Steps & Implementation
+## Configuration Steps & Implementation
 1. Local Area Network (LAN) & DHCP Setup
 Three distinct subnets were created, each managed by a dedicated DHCP server to automate IP distribution for host devices:
 
@@ -197,7 +197,7 @@ Centralized DNS: Server 0 was configured as the primary DNS resolver for the ent
 
 Global Configuration: The DNS IP 192.168.1.50 was propagated via DHCP across all three subnets, allowing any PC in the mesh to resolve the domain name.
 
-## 🔍 Troubleshooting & Validation
+## Troubleshooting & Validation
 During the implementation phase, several network issues were identified and resolved:
 
 Inconsistent Addressing: Corrected subnet masks and network IDs to align with routing logic.
@@ -211,23 +211,23 @@ Service Sync: Toggled PCs from Static to DHCP to ensure they received updated DN
 Content Customization: Successfully edited the index.html file on Server 0 to display personalized project content via the Web Browser.
 
 Final Testing Results:
-ICMP Connectivity (Ping): ✅ Successful replies between all remote hosts.
+ICMP Connectivity (Ping):  Successful replies between all remote hosts.
 <img width="939" height="513" alt="ping from PC0 to subnets PCs" src="https://github.com/user-attachments/assets/787fe8c4-f607-47aa-8c87-a411c2bb6c48" />
 
-DNS Resolution (nslookup): ✅ www.nada.com successfully resolves to 192.168.1.50.
+DNS Resolution (nslookup):  www.nada.com successfully resolves to 192.168.1.50.
 <img width="911" height="572" alt="DNS test from PC2" src="https://github.com/user-attachments/assets/5aa77a30-db2a-4ea8-9c74-ed5dc82698a9" />
 
-Web Browser Verification: ✅ Website content successfully loads from all remote workstations.
+Web Browser Verification:  Website content successfully loads from all remote workstations.
 <img width="783" height="548" alt="web browser test" src="https://github.com/user-attachments/assets/9d5d08f5-6cef-4a10-a286-5daf0398fb49" />
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## 🚀 Lab 07: Site-to-Site Enterprise Network & OSPF Routing
+## Lab 07: Site-to-Site Enterprise Network & OSPF Routing
 Two-Branch Infrastructure with Dynamic OSPF Routing and VLSM Optimization
 
-## 📌 Project Overview
+## Project Overview
 This project involves the design and implementation of a scalable enterprise network connecting two main branches: Smouha Branch and the Head Office. The system is engineered using Cisco 2911 routers to ensure seamless data flow through the OSPF (Open Shortest Path First) dynamic routing protocol. The infrastructure focuses on VLSM (Variable Length Subnet Masking) to optimize IP address allocation, specifically using /30 subnets for point-to-point wide area network (WAN) links.
 
-## 🏗 Network Topology (Architecture)
+## Network Topology (Architecture)
 The network utilizes a Point-to-Point topology between the branches, ensuring a dedicated and efficient path for inter-branch communication.
 
 <img width="402" height="412" alt="Site-to-Site OSPF Topology" src="https://github.com/user-attachments/assets/64937766-650c-4a60-a6d3-ee1c219bbf8e" />
@@ -235,7 +235,7 @@ The network utilizes a Point-to-Point topology between the branches, ensuring a 
 
 Description: Diagram showing the interconnection between Smouha Branch (R1) and Head Office (R2).
 
-## 🛠 Configuration Steps & Implementation
+## Configuration Steps & Implementation
 
 1. Local Area Network (LAN) Configuration
 Two distinct subnets were established to represent the internal infrastructure of each branch:
@@ -292,7 +292,7 @@ network 10.0.0.0 0.0.0.3 area 0
 This screenshot verifies that the OSPF protocol is active. The entries marked with 'O' indicate that the router has successfully learned the remote networks from its neighbor. 
 
 
-## 🔍 Troubleshooting & Validation
+## Troubleshooting & Validation
 During the validation phase, the following tests were conducted to ensure network integrity:
 
 Adjacency Check: Verified that OSPF neighbors reached the "FULL" state, allowing for successful routing table exchange.
@@ -306,22 +306,22 @@ Final Testing Results:
 <img width="621" height="298" alt="ping dynamic routing" src="https://github.com/user-attachments/assets/6b7aee33-46f0-4a77-9b6f-c587a78a8f22" />
 
 
-ICMP Connectivity (Ping): ✅ Successful replies from PC0 (Smouha) to PC4 (Head Office) with 0% loss.
+ICMP Connectivity (Ping): Successful replies from PC0 (Smouha) to PC4 (Head Office) with 0% loss.
 
 <img width="504" height="158" alt="tracert dynamic routing" src="https://github.com/user-attachments/assets/71012d50-c722-4252-9b65-55076ae5d384" />
 
 
-Path Tracing (Tracert): ✅ Confirmed the data path through 3 hops: Gateway ➡️ WAN Link ➡️ Remote Host.
+Path Tracing (Tracert): Confirmed the data path through 3 hops: Gateway --> WAN Link --> Remote Host.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## 🚀 Lab 08: Distributed Enterprise Mesh & Advanced OSPF Routing
+## Lab 08: Distributed Enterprise Mesh & Advanced OSPF Routing
 Full-Mesh Triangle Infrastructure with Multi-Branch Services (DHCP, DNS, HTTP)
 
-## 📌 Project Overview
+## Project Overview
 This project demonstrates the design of a highly redundant enterprise network connecting three main branches in Alexandria (Smouha, Miami, and Centre). The architecture utilizes a Full-Mesh Triangle Topology to ensure multiple paths for data flow, managed by the OSPF dynamic routing protocol. The project focuses on "Distributed Services," where network functions (DNS and HTTP) are strategically placed across different branches to simulate a real-world enterprise environment.
 
-## 🏗 Network Topology (Architecture)
+## Network Topology (Architecture)
 The network is built using three Cisco routers connected in a triangle formation. This design ensures that if any single WAN link fails, OSPF will automatically reroute traffic through the alternative path.
 
 
@@ -330,7 +330,7 @@ The network is built using three Cisco routers connected in a triangle formation
 
 Description: Full-Mesh interconnection between Smouha, Miami, and Centre routers with active OSPF adjacencies.
 
-## 🛠 Configuration Steps & Implementation
+## Configuration Steps & Implementation
 
 1. VLSM & IP Addressing Scheme
 To maximize efficiency, VLSM was applied using /30 subnets for the point-to-point WAN links, providing exactly 2 usable IPs per link:
@@ -374,7 +374,7 @@ network 10.0.0.8 0.0.0.3 area 0
 **Note:** The 'O' prefix observed in the routing table (as shown above) confirms successful OSPF adjacency and dynamic route injection between the three branches.
 
 
-## 🔍 Troubleshooting & Validation
+## Troubleshooting & Validation
 
 Several critical network challenges were addressed during the testing phase:
 
@@ -401,7 +401,7 @@ Before Failure: Traffic took the shortest path (3 hops) via the 10.0.0.9 link.
 
 <img width="666" height="458" alt="Tracert after link failure" src="https://github.com/user-attachments/assets/1b1353a4-cca0-4335-9709-21bff81000e1" />
 
-After Failure: OSPF dynamically recalculated the best path, rerouting traffic through the Miami branch (10.0.0.5 ➡️ 10.0.0.1).
+After Failure: OSPF dynamically recalculated the best path, rerouting traffic through the Miami branch (10.0.0.5 --> 10.0.0.1).
 
 Result: Connectivity remained active with zero packet loss, proving the redundancy of the triangle mesh topology.
 
@@ -414,44 +414,12 @@ Result: Connectivity remained active with zero packet loss, proving the redundan
 
 <img width="783" height="475" alt="DNS-Resolution-Test ,End-to-End-Connectivity-Ping " src="https://github.com/user-attachments/assets/8c5a4cac-42b9-4fc9-97fa-0d505f58ad5e" />
 
-ICMP Connectivity: ✅ 100% success rate in Pings across all branches.
-DNS Resolution: ✅ nslookup www.nada.com correctly resolves to the Smouha Server IP (192.168.10.50).
+ICMP Connectivity: 100% success rate in Pings across all branches.
+DNS Resolution: nslookup www.nada.com correctly resolves to the Smouha Server IP (192.168.10.50).
 
 
 <img width="805" height="522" alt="Web-Service-Final-Verification" src="https://github.com/user-attachments/assets/2a24a8d7-8757-462e-bdc1-d80c038ead40" />
 
 
-Web Services: ✅ The "Welcome to Nada's Network" HTML page loads successfully on all remote workstations.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Web Services: The "Welcome to Nada's Network" HTML page loads successfully on all remote workstations.
 
