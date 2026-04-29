@@ -1,9 +1,9 @@
 # Windows System Administration & Core CLI Ops
 ## Comprehensive guide for:
-* 📂 File & Directory Management
-* 🔐 User & Access Control 
-* ⚙️ Process & Service Management
-* 🛠️ Logging & Troubleshooting
+*  File & Directory Management
+*  User & Access Control 
+*  Process & Service Management
+*  Logging & Troubleshooting
 
 |                 Command                 |           Function              |
 -----------------------------------------------------------------------------parameter
@@ -81,13 +81,3 @@ NTFS                                      |  file system to control access (F,M,
 'get-eventlog -logname System -entrytype Error -newest 5'   | list latest 5 errors occured to windows 
 'get-eventlog -logname System -message "*disk*"'            | list events that contain "disk" word 
 'test-path (path)'                                          | verify if the file/folder exist or not (boolean output)
-
-
-
-
-
-
-
-
-
-
