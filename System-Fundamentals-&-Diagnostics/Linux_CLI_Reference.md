@@ -1,12 +1,12 @@
-🐧 Linux System Administration & Core CLI Ops
+ Linux System Administration & Core CLI Ops
 Comprehensive guide for:
-📂 File & Directory Management
+ File & Directory Management
 (ls, cd, mkdir, touch, cp, mv, rm, cat, nano, grep, pipe |)
 
-🔐 User & Access Control
+ User & Access Control
 (useradd, usermod, userdel, passwd, sudo, /etc/passwd, /etc/shadow)
 
-🛡️ Permissions & Ownership
+ Permissions & Ownership
 (chmod, chown, chgrp, SUID, SGID, Sticky Bit)
 
 |                 Command                 |           Function              |
@@ -79,33 +79,3 @@ r = 4 , w = 2 , x = 1 , - = 0              permission of this file 764
 `sudo chmod u+s 'file'`                     | lets a normal user run the passwd program as if they were the Root (Admin)   s=4
 `sudo chmod g+s 'file'`                     | s (set group id SGID)  s=2
 `sudo chmod +t 'folder'`                    | everyone can add or modify files but root/owner only can delete t=1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
