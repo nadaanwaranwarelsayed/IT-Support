@@ -47,4 +47,3 @@ Once the installation was complete, I performed the following essential administ
 2.  **Server Renaming:** Changed the default computer name to `DC-MASTER` for better identification within the domain.
 3.  **Static IP Configuration:** Assigned a manual IPv4 address to ensure consistent network connectivity for future Domain Services.
 
-<img width="100%" alt="Administrator Setup" src="رابط_صورة_شاشة_الباسورد" />
