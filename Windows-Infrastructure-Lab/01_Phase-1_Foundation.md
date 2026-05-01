@@ -118,7 +118,11 @@ Authentication: Authenticated as the built-in Administrator using the previously
 Post-Logon: Upon successful login, the Server Manager dashboard appeared, signaling that the system is ready for the post-installation configuration phase.
 
 
+## Status: OS Installation Completed.
 
+## Edition: Windows Server 2022 Standard Evaluation.
+
+## Interface: Desktop Experience (GUI) is active.
 
 
 
