@@ -151,7 +151,19 @@ Verification: Upon reboot, I verified through the Local Server dashboard that th
 <img width="1073" height="828" alt="11" src="https://github.com/user-attachments/assets/a3507d8b-4580-48a2-8965-1ce3fedb3a9f" />
 
 
+## Network Configuration: Assigning Static IP
 
+To ensure the Domain Controller has a permanent network identity, I assigned a static IP address following these steps:
+
+Navigate to Server Manager > Local Server.
+
+Click on the IPv4 address link next to the Ethernet interface.
+
+In the Network Connections window, right-click Ethernet and choose Properties.
+
+Select Internet Protocol Version 4 (TCP/IPv4) and click Properties.
+
+<img width="1105" height="826" alt="12" src="https://github.com/user-attachments/assets/e83d6764-bd99-4338-98fd-5aaabd32575b" />
 
 
 
