@@ -73,6 +73,14 @@ Justification: Since this is a fresh installation on a new virtual hard drive (5
 
 <img width="679" height="462" alt="6" src="https://github.com/user-attachments/assets/7b94e6a2-1f6a-48ee-b4dc-d5d7e06cee7c" />
 
+## Disk Partitioning
+I allocated the entire 50 GB of virtual disk space to the primary partition.
 
+Action taken: Selected "Drive 0 Unallocated Space" and clicked Next.
+
+Result: Windows Setup automatically creates the necessary system partitions (System Reserved and Primary) to proceed with the installation.
+The full 50GB was allocated to a single partition (Drive C:) to provide ample space for Windows Server 2022 system files and the Active Directory database, ensuring optimal performance for this Domain Controller lab.
+
+<img width="682" height="535" alt="7" src="https://github.com/user-attachments/assets/efc5f538-cff7-4918-88df-bbd97ea6377f" />
 
 
