@@ -36,6 +36,7 @@ Configuring Internal Network: Changed the "Attached to" option from NAT to Inter
 
 Defining the Lab LAN: Named the internal network LabNetwork.
 
+Promiscuous Mode was set to "Deny" to ensure network security and data privacy within the virtual LAN, preventing the adapter from capturing packets intended for other virtual machines.
 Why this step is mandatory:
 
 Isolation: It prevents the virtual Windows Server from interacting with the physical home network (Host), avoiding potential conflicts with the local router's DHCP.
