@@ -84,3 +84,13 @@ The full 50GB was allocated to a single partition (Drive C:) to provide ample sp
 <img width="682" height="535" alt="7" src="https://github.com/user-attachments/assets/efc5f538-cff7-4918-88df-bbd97ea6377f" />
 
 
+## OS Installation & File Expansion
+After configuring the disk partition and clicking Next, the formal installation process began.
+
+Process Initiation: The system started copying the core operating system files from the ISO image to the virtual hard drive.
+
+File Expansion: The setup entered the "Getting files ready for installation" stage, where the compressed system files within the ISO are expanded and extracted to the allocated 50GB partition.
+
+Hardware Utilization: During this phase, the system utilizes the assigned 2 CPU cores and 4GB RAM to ensure a smooth deployment. 
+
+<img width="694" height="552" alt="8" src="https://github.com/user-attachments/assets/2e86c8e6-126b-4730-ad5b-189223fd73d6" />
