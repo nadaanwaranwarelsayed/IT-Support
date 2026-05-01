@@ -45,8 +45,12 @@ Connectivity: It creates a dedicated virtual switch (LAN) where the Domain Contr
 
 <img width="979" height="643" alt="4" src="https://github.com/user-attachments/assets/4fb9ea51-058c-45f0-8517-0f1966042b85" />
 
+## Phase 2: Initializing Windows Server Installation
+Booting the ISO: After clicking Start, a black screen appeared. I quickly pressed Space to boot from the attached ISO file.
 
+Regional Settings: In the first setup screen, I kept the default settings (English US) for Language, Time, and Keyboard to ensure maximum compatibility with future Active Directory services.
 
+Initiating Setup: Clicked Install Now to begin the operating system deployment.
 
 
 
