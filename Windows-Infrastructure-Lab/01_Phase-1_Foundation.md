@@ -195,9 +195,16 @@ Verification: Clicked OK to commit the changes, transitioning the interface from
 
 
 
+Step 9: Creating a System Restore Point (Snapshot)
+Before moving to the next phase of the project, I created a virtual machine snapshot to preserve the current stable state.
 
+Snapshot Name: Foundation_Setup_Complete
 
+Description: This snapshot marks the successful completion of the initial server environment, including the hostname change to WinServer2022-DC and the assignment of a static IP (192.168.10.10).
 
+Purpose: To establish a recovery point that allows for an immediate roll-back if any issues occur during the upcoming installation of Active Directory Domain Services (AD DS).
+
+<img width="952" height="773" alt="15" src="https://github.com/user-attachments/assets/9e6661f7-4255-4815-9c4d-736b528b0a08" />
 
 
 
