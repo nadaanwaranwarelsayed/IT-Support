@@ -167,8 +167,31 @@ Select Internet Protocol Version 4 (TCP/IPv4) and click Properties.
 
 
 
+## Step 7: Configuring IPv4 Properties
+To manually define the network settings, I accessed the Ethernet Properties:
+
+Protocol Selection: Selected Internet Protocol Version 4 (TCP/IPv4) from the connection items list.
+
+Action: Clicked on the Properties button to open the manual IP configuration dialogue.
+
+Purpose: This step is mandatory to move away from dynamic IP assignment (DHCP) to a static setup, which is a prerequisite for installing Active Directory Domain Services (AD DS).
+
+<img width="403" height="477" alt="13" src="https://github.com/user-attachments/assets/102d5284-4969-4002-8e3a-2eac6b015bee" />
 
 
+
+## Finalizing Static IP & DNS Details
+In this step, I manually configured the network parameters to ensure the server has a fixed location within the lab environment.
+
+IP Address: Set to 192.168.10.10.
+
+Subnet Mask: Configured as 255.255.255.0 to define the local network segment.
+
+DNS Configuration: Pointed the Preferred DNS server to the server's own IP address (192.168.10.10). This is a critical step because the server will host the DNS role required for Active Directory.
+
+Verification: Clicked OK to commit the changes, transitioning the interface from DHCP to a stable, static state.
+
+<img width="444" height="465" alt="14" src="https://github.com/user-attachments/assets/e1ff3493-21cf-4331-b834-23d96cb340e7" />
 
 
 
