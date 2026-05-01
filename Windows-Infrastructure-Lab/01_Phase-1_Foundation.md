@@ -108,7 +108,14 @@ Verification: Re-entered the password to confirm and finalized the setup.
 <img width="747" height="518" alt="9" src="https://github.com/user-attachments/assets/f1458f33-3de5-454e-bc4b-b9467fea50ea" />
 
 
+## Logon Mechanism & System Access
+After the final setup, I accessed the system for the first time using the following procedure:
 
+Input Method: To avoid conflict with the Host OS, I used the VirtualBox menu: Input > Keyboard > Insert Ctrl-Alt-Del to trigger the login screen.
+
+Authentication: Authenticated as the built-in Administrator using the previously configured complex password.
+
+Post-Logon: Upon successful login, the Server Manager dashboard appeared, signaling that the system is ready for the post-installation configuration phase.
 
 
 
