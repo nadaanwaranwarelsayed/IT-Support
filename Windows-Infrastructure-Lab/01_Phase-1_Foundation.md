@@ -126,6 +126,31 @@ Post-Logon: Upon successful login, the Server Manager dashboard appeared, signal
 
 
 
+## System Identity & Hostname Configuration
+
+After completing the OS installation, the first priority was to establish a standardized naming convention for the server.
+
+Initial Identity: The system was originally assigned a random hostname (WIN-TGFGLFCKHN1).
+
+Renaming Process:
+
+Accessed Server Manager > Local Server.
+
+Navigated to System Properties and initiated a name change under the Computer Name/Domain Changes settings.
+
+<img width="1103" height="790" alt="10" src="https://github.com/user-attachments/assets/066f4fbe-8b96-4218-8e5c-7db56cc61f37" />
+
+Set the new Computer Name to: WinServer2022-DC.
+
+NetBIOS Notification: During the renaming process, a system notification appeared regarding the 15-character limit for NetBIOS names, which was acknowledged without affecting the primary DNS hostname.
+
+System Reboot: A manual restart was performed to apply the new configuration.
+
+Verification: Upon reboot, I verified through the Local Server dashboard that the hostname was successfully updated to WinServer2022-DC.
+
+<img width="1073" height="828" alt="11" src="https://github.com/user-attachments/assets/a3507d8b-4580-48a2-8965-1ce3fedb3a9f" />
+
+
 
 
 
