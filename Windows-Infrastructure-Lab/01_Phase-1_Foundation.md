@@ -45,7 +45,7 @@ Connectivity: It creates a dedicated virtual switch (LAN) where the Domain Contr
 
 <img width="979" height="643" alt="4" src="https://github.com/user-attachments/assets/4fb9ea51-058c-45f0-8517-0f1966042b85" />
 
-## Phase 2: Initializing Windows Server Installation
+## Initializing Windows Server Installation
 Booting the ISO: After clicking Start, a black screen appeared. I quickly pressed Space to boot from the attached ISO file.
 
 Regional Settings: In the first setup screen, I kept the default settings (English US) for Language, Time, and Keyboard to ensure maximum compatibility with future Active Directory services.
@@ -53,8 +53,25 @@ Regional Settings: In the first setup screen, I kept the default settings (Engli
 Initiating Setup: Clicked Install Now to begin the operating system deployment.
 
 
+## Operating System Installation & Edition Selection
+After the initial boot, I proceeded with the manual installation of the operating system to ensure full control over the environment.
+
+1. Version Selection
+I chose Windows Server 2022 Datacenter Evaluation (Desktop Experience).
+
+Why Datacenter? It provides the most complete feature set for a lab environment, including advanced networking and storage capabilities.
+
+Why Desktop Experience? This is crucial as it installs the full Graphical User Interface (GUI). Without this selection, the server would install as a "Server Core" (Command-line only), which is not ideal for this initial learning phase.
+
+<img width="847" height="688" alt="5" src="https://github.com/user-attachments/assets/0cd78cde-06a3-4a3b-b7fc-fb122ec15518" />
 
 
+2. Installation Type
+When prompted, I selected Custom: Install Microsoft Server Operating System only (advanced).
+
+Justification: Since this is a fresh installation on a new virtual hard drive (50GB), we are not performing an upgrade. The "Custom" option allows us to verify the disk partition and ensure a clean state for our Domain Controller.
+
+<img width="679" height="462" alt="6" src="https://github.com/user-attachments/assets/7b94e6a2-1f6a-48ee-b4dc-d5d7e06cee7c" />
 
 
 
