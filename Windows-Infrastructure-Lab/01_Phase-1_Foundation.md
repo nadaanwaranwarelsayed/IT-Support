@@ -56,12 +56,11 @@ Initiating Setup: Clicked Install Now to begin the operating system deployment.
 ## Operating System Installation & Edition Selection
 After the initial boot, I proceeded with the manual installation of the operating system to ensure full control over the environment.
 
-1. Version Selection
-I chose Windows Server 2022 Datacenter Evaluation (Desktop Experience).
+Version Selection: I chose Windows Server 2022 Standard Evaluation (Desktop Experience).
 
-Why Datacenter? It provides the most complete feature set for a lab environment, including advanced networking and storage capabilities.
+Why Standard? It is the ideal edition for physical or minimally virtualized environments. For this lab, it provides all the necessary roles (Active Directory, DNS, DHCP) required to build and manage a professional domain environment.
 
-Why Desktop Experience? This is crucial as it installs the full Graphical User Interface (GUI). Without this selection, the server would install as a "Server Core" (Command-line only), which is not ideal for this initial learning phase.
+Why Desktop Experience? This is crucial as it installs the full Graphical User Interface (GUI). Without this selection, the server would install as a "Server Core" (Command-line only), which is not ideal for this initial learning phase where visual management tools are needed.
 
 <img width="847" height="688" alt="5" src="https://github.com/user-attachments/assets/0cd78cde-06a3-4a3b-b7fc-fb122ec15518" />
 
