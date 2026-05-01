@@ -93,3 +93,41 @@ File Expansion: The setup entered the "Getting files ready for installation" sta
 Hardware Utilization: During this phase, the system utilizes the assigned 2 CPU cores and 4GB RAM to ensure a smooth deployment. 
 
 <img width="694" height="552" alt="8" src="https://github.com/user-attachments/assets/2e86c8e6-126b-4730-ad5b-189223fd73d6" />
+
+
+
+## Post-Installation: Administrator Account Setup
+After the system rebooted, the Out-of-Box Experience (OOBE) phase began.
+
+Customizing Settings: The system prompted to set a password for the built-in Administrator account.
+
+Security Requirements: I configured a complex password that meets the default Windows Server password policy requirements (including uppercase, lowercase, numbers, and symbols).
+
+Verification: Re-entered the password to confirm and finalized the setup.
+
+<img width="747" height="518" alt="9" src="https://github.com/user-attachments/assets/f1458f33-3de5-454e-bc4b-b9467fea50ea" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
